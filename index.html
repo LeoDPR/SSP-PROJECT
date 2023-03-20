@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejidad y gestion de las organizaciones</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <nav class="nav">
+            <div class="nav__logo">
+                <h2 class="nav__title">Cuerpo academico</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#Inicio" class="nav__links" onclick="mostrar_ocultarInicio()">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Noticias" class="nav__links" onclick="mostrar_ocultarNoticias()">Noticias</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Trabajos" class="nav__links" onclick="mostrar_ocultarTrabajos()">Trabajos</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Miembros" class="nav__links" onclick="mostrar_ocultarMiembros()">Miembros</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Contacto" class="nav__links" onclick="mostrar_ocultarContacto()">Contacto</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#Nosotros" class="nav__links" onclick="mostrar_ocultarNosotros()">Nosotros</a>
+                </li>
+                <img src="./images/close.svg" alt="close" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" alt="menu" class="nav__img">
+            </div>
+        </nav>
+        <!--
+        <section class="hero__container container">
+            <h1 class="hero__title">Complejidad y gestion de las organizaciones</h1>
+            <p class="hero__paragraph">Complejidad, Gestion de la Innovacion: teoria y aplicaciones</p>
+        </section> -->
+    </header>
+
+    <!-- /////////Inicio -->
+
+    <div id="Inicio">
+        <section class="inicio__container">
+            <h1 class="inicio__title">Complejidad y gestion de las organizaciones</h1>
+            <p class="inicio__paragraph">Complejidad, Gestion de la Innovacion: teoria y aplicaciones</p>
+        </section>
+
+        <main>
+            <section class="news  container">
+                <div class="news__container">
+                    <h2 class="subtitle2">Noticias/Eventos</h2>
+                    <div class="articles__news">
+                        <article>
+                            <img src="./images/event.jpg" class="news__image" alt="evento">
+                            <h3 class="subtitle3">Lorem Ipsum</h3>
+                            <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                pulvinar
+                                tempus est, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec eros
+                                lorem,
+                                blandit ac commodo at, malesuada et mauris.</p>
+                        </article>
+
+                        <article>
+                            <img src="./images/event.jpg" class="news__image" alt="evento">
+                            <h3 class="subtitle3">Lorem Ipsum</h3>
+                            <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                pulvinar
+                                tempus est, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec eros
+                                lorem,
+                                blandit ac commodo at, malesuada et mauris.</p>
+                        </article>
+
+                        <article>
+                            <img src="./images/event.jpg" class="news__image" alt="evento">
+                            <h3 class="subtitle3">Lorem Ipsum</h3>
+                            <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                pulvinar
+                                tempus est, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec eros
+                                lorem,
+                                blandit ac commodo at, malesuada et mauris.</p>
+
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="investigaciones container">
+                <h2 class="subtitle2">Investigaciones</h2>
+                <div class="investigaciones__container">
+                    <div class="investigaciones__texts">
+
+                        <h2 class="subtitle3">Lorem Ipsum</h2>
+                        <p class="investigaciones__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Donec
+                            pulvinar tempus es
+                            t, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec
+                            eros lorem, blandi
+                            t ac commodo at, malesuada et mauris.</p>
+                    </div>
+
+                    <figure class="investigaciones__picture">
+                        <img src="./images/research.jpg" alt="imagen de investigacion" class="investigacion__img">
+                    </figure>
+
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- //////////Noticias////////// -->
+
+    <div id="Noticias" class="hidden">
+        <h1>Noticias</h1>
+    </div>
+
+
+    <!-- //////////Miembros//////////// -->
+
+    <div id="Miembros" class="hidden">
+        <h1>Miembros</h1>
+    </div>
+
+
+    <!-- //////////Trabajos////////////// -->
+
+    <div id="Trabajos" class="hidden">
+        <h1>Trabajos</h1>
+    </div>
+
+
+    <!-- //////////Contacto////////////// -->
+
+
+    <div id="Contacto" class="hidden">
+        <h1>Contacto</h1>
+    </div>
+
+
+    <!-- //////////Nosotros///////// -->
+
+    <div id="Nosotros" class="hidden">
+        <h1>Nosotros</h1>
+        <section class="nosotros__nav">
+
+        </section>
+        <div class="nosotros__imagen">
+            <img src="./images/Quienes somos.jpg">
+        </div>
+    </div>
+
+    <footer>
+        <nav class="footer">
+            <table class="footer__table">
+                <tr>
+                    <th>Secciones</th>
+                    <th>Información</th>
+                    <th>UABC</th>
+                    <th>Redes Sociales</th>
+                </tr>
+                <tr>
+                    <td><a href="#Noticias" class="nav__links" onclick="mostrar_ocultarNoticias()">Noticias</a></td>
+                    <td></td>
+                    <td><a href="https://www.uabc.mx/historia/" class="nav__links">Historia</a></td>
+                    <td><a href="https://www.facebook.com/centrodeestudiosdelacomplejidadfca"><img
+                                src="./images/Facebook logo.jpg" class="social_media"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#Trabajos" class="nav__links" onclick="mostrar_ocultarTrabajos()">Trabajos</a></td>
+                    <td></td>
+                    <td><a href="https://www.uabc.mx/programas-educativos/" class="nav__links">Oferta Educativa</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#Miembros" class="nav__links" onclick="mostrar_ocultarMiembros()">Miembros</a></td>
+                    <td></td>
+                    <td><a href="https://www.uabc.mx/movilidad-estudiantil/" class="nav__links">Vida Universitaria</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#Contacto" class="nav__links" onclick="mostrar_ocultarContacto()">Contacto</a></td>
+                    <td></td>
+                    <td><a href="https://www.uabc.mx/formacion-docente/" class="nav__links">Docencia e Investigación</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#Nosotros" class="nav__links" onclick="mostrar_ocultarNosotros()">Nosotros</a></td>
+                    <td></td>
+                    <td><a href="http://transparencia.uabc.mx/" class="nav__links">Transparencia</a></td>
+                </tr>
+            </table>
+        </nav>
+    </footer>
+    <script src="./js/funciones.js"></script>
+</body>
+
+</html>
