@@ -51,3 +51,35 @@ function mostrar_ocultarNosotros() {
     document.getElementById('Contacto').classList.add("hidden");
     document.getElementById('Nosotros').classList.remove("hidden");
 }
+
+function mostrar_ocultar_Subnosotros() {
+    document.getElementById('Nosotros2').classList.remove("hidden");
+    document.getElementById('Historia').classList.add("hidden");
+    document.getElementById('Universidad').classList.add("hidden");
+}
+
+function mostrar_ocultarHistoria() {
+    document.getElementById('Nosotros2').classList.add("hidden");
+    document.getElementById('Historia').classList.remove("hidden");
+    document.getElementById('Universidad').classList.add("hidden");
+}
+
+function mostrar_ocultarUniversidad() {
+    document.getElementById('Nosotros2').classList.add("hidden");
+    document.getElementById('Historia').classList.add("hidden");
+    document.getElementById('Universidad').classList.remove("hidden");
+}
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hide');
+hiddenElements.forEach((el) => observer.observe(el));
