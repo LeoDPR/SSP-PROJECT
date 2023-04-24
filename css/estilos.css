@@ -199,7 +199,6 @@ th, td {
 #Trabajos {
     height: 100%;
     margin: 0 auto;
-    position: relative;
     width: 150vh;
 }
 
@@ -258,17 +257,18 @@ th, td {
 /*inicio news*/    
 .news{
     text-align: left;
-    }
-    .articles__news {
-            padding-top: 60px;
-            display: grid;
-            line-height: 3em;
-            width: 150vh;
-            margin: 0 auto;
-            gap: 2em;
-            overflow: hidden;
-            grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
-    }
+}
+.articles__news {
+    padding-top: 60px;
+    display: grid;
+    line-height: 3em;
+    width: 150vh;
+    margin: 0 auto;
+    gap: 2em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
+}
+
     .news__image{
         display: grid;
         gap: 1em;
@@ -418,6 +418,7 @@ th, td {
     .info__trabajo{
         width: 90%;
     }
+
 
 /*Contenido del nosotros*/
 .nosotros__container {

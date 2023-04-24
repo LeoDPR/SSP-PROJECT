@@ -64,7 +64,7 @@
 
                 while($row = mysqli_fetch_assoc($select)) {
             ?>
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" class="w-50" enctype="multipart/form-data" method="POST">
+            <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="w-50" enctype="multipart/form-data" method="POST">
                     <div class="form-group">
                         <input type="text" name="nombre" placeholder="Nombre" value="<?php echo $row['nombre']; ?>" class="form-control my-4" />
                     </div>
@@ -89,5 +89,51 @@
             <?php }; ?>
         </div>
     </div>
+
+    <!--  Mostrar info en tablas  -->
+
+    <div class="container">
+                    <h1 class="text-center my-4">Información </h1>
+                    <div class="container mt-5 d-flex justify-content-center">
+                        <table class="table table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Categoria</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Doc</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col" colspan="2">Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+                                    $select = mysqli_query($conn, "SELECT * FROM investigaciones");
+
+                                    while($row = mysqli_fetch_assoc($select)) {
+
+                                ?>
+
+                                <tr>
+                                    <td><?php echo $row['id_investigacion']; ?></td>
+                                    <td><?php echo $row['nombre']; ?></td>
+                                    <td><?php echo $row['fecha_publicacion']; ?></td>
+                                    <td><?php echo $row['categoria']; ?></td>
+                                    <td><?php echo $row['descripcion']; ?></td>
+                                    <td><iframe src="investigaciones/docs/<?php echo $row['url_descarga']; ?>" width="100px" ></iframe></td>
+                                    <td><img src="investigaciones/images/<?php echo $row['imagen']; ?>" width="100px" /></td>
+                                    <td scope="col"><a href="update.php?edit=<?php echo $row['id_investigacion']; ?>" class="btn btn-info">Editar</a></td>
+                                    <td scope="col"><a href="index.php?delete=<?php echo $row['id_investigacion']; ?>" class="btn btn-danger">Eliminar</a></td>
+                                </tr>
+
+                                <?php  } ?>
+                                    
+                            </tbody>
+                        </table>
+                    </div> 
+                </div>
 </body>
 </html>

@@ -22,7 +22,8 @@
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -149,9 +150,9 @@
                 <li class="sidebar__item">
                     <h2>Trabajos</h2>
                 </li>
-                <li class="sidebar__item"><a href="#" class="aside__links">Investigaciones</a></li>
-                <li class="sidebar__item"><a href="#" class="aside__links">Libros</a></li>
-                <li class="sidebar__item"><a href="#" class="aside__links">Articulos</a></li>
+                <li class="sidebar__item"><a href="#" class="aside__links" onclick="mostrar_ocultarInvestigaciones()" >Investigaciones</a></li>
+                <li class="sidebar__item"><a href="#" class="aside__links" onclick="mostrar_ocultarLibros()" >Libros</a></li>
+                <li class="sidebar__item"><a href="#" class="aside__links" onclick="mostrar_ocultarArticulos()" >Articulos</a></li>
             </ul>
         </aside>
         <main id="main__trabajos">
@@ -175,10 +176,11 @@
 
         <!--  /////////////////////     Agregar Investigaciones /////////////////     -->
 
-        <div>
-            <h1 class="text-center my-3">Registros</h1>
-            <div class="container d-flex justify-content-center">
-                <form action="<?php $_SERVER['PHP_SELF'] ?>" class="w-50" enctype="multipart/form-data" method="POST">
+       <!-- <div>
+            <h1>Registros</h1>
+            <div>
+                <h2>Investigaciones</h2>
+                <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="w-50" enctype="multipart/form-data" method="POST">
                     <div class="form-group">
                         <input type="text" name="nombre" placeholder="Nombre" class="form-control my-4" />
                     </div>
@@ -199,7 +201,7 @@
                     </div>
                     <button class="btn btn-dark" type="submit" name="submit">Submit</button>
                 </form>
-            </div>  
+            </div> -->
             <?php
                         if (isset($_POST['submit'])) {
                             $nombre = $_POST['nombre'];
@@ -238,51 +240,224 @@
 
                  ?>
 
-                 <!--  /////////////////////   Mostrar Investigaciones /////////////////     -->
+                   <!--  /////////////////////     Agregar Libros   /////////////////     -->
 
-                 <div class="container">
-                    <h1 class="text-center my-4">Información </h1>
-                    <div class="container mt-5 d-flex justify-content-center">
-                        <table class="table table-bordered">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Categoria</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Doc</th>
-                                    <th scope="col">Imagen</th>
-                                    <th scope="col" colspan="2">Acción</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-
-                                    $select = mysqli_query($conn, "SELECT * FROM investigaciones");
-
-                                    while($row = mysqli_fetch_assoc($select)) {
-
-                                ?>
-
-                                <tr>
-                                    <td><?php echo $row['id_investigacion']; ?></td>
-                                    <td><?php echo $row['nombre']; ?></td>
-                                    <td><?php echo $row['fecha_publicacion']; ?></td>
-                                    <td><?php echo $row['categoria']; ?></td>
-                                    <td><?php echo $row['descripcion']; ?></td>
-                                    <td><iframe src="investigaciones/docs/<?php echo $row['url_descarga']; ?>" width="100px" ></iframe></td>
-                                    <td><img src="investigaciones/images/<?php echo $row['imagen']; ?>" width="100px" /></td>
-                                    <td scope="col"><a href="update.php?edit=<?php echo $row['id_investigacion']; ?>" class="btn btn-info">Editar</a></td>
-                                    <td scope="col"><a href="index.php?delete=<?php echo $row['id_investigacion']; ?>" class="btn btn-danger">Eliminar</a></td>
-                                </tr>
-
-                                <?php  } ?>
-                                    
-                            </tbody>
-                        </table>
+          <!--  <div>
+                <h2>Libros</h2>
+                <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" enctype="multipart/form-data" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="titulo" placeholder="Titulo" class="form-control my-4" />
                     </div>
-                 </div>
+                    <div class="form-group">
+                        <input type="text" name="descripcion_libro" placeholder="Descripción" class="form-control my-4" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="categoria_libro" placeholder="Categoria" class="form-control my-4" />
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="fecha_publicacion_libro" placeholder="Fecha" class="form-control my-4" />
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="url_descarga_libro" class="form-control my-4" accept=".pdf"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="imagen_libro" class="form-control my-4" accept="image/png, image/jpg, image/jpeg" />
+                    </div>
+                    <button class="btn btn-dark" type="submit" name="libro">Submit</button>
+                </form>
+            </div>  -->
+            <?php
+                        if (isset($_POST['libro'])) {
+                            $titulo = $_POST['titulo'];
+                            $descripcion_libro = $_POST['descripcion_libro'];
+                            $categoria_libro = $_POST['categoria_libro'];
+                            $fecha_publicacion_libro = $_POST['fecha_publicacion_libro'];
+                            $url_descarga_libro = $_FILES['url_descarga_libro']['name'];
+                            $url_descarga_libro_tmp_name = $_FILES['url_descarga_libro']['tmp_name'];
+                            $url_descarga_libro_folder = 'libros/docs/'.$url_descarga_libro;
+                            $imagen_libro = $_FILES['imagen_libro']['name'];
+                            $imagen_libro_tmp_name = $_FILES['imagen_libro']['tmp_name'];
+                            $imagen_libro_folder = 'libros/images/'.$imagen_libro;
+
+                            if (empty($url_descarga_libro) || empty($imagen_libro)) {
+                                $message[] = 'Llena los campos de archivos';
+                            } else {
+                                $insert_libro = "INSERT INTO libros (titulo, descripcion, categoria, fecha_publicacion, url_descarga, imagen) values ('$titulo', '$descripcion_libro', '$categoria_libro', '$fecha_publicacion_libro', '$url_descarga_libro', '$imagen_libro')";
+                                $upload_libro = mysqli_query($conn, $insert_libro);
+
+                                if ($upload_libro) {
+                                    move_uploaded_file($url_descarga_libro_tmp_name, $url_descarga_libro_folder);
+                                    move_uploaded_file($imagen_libro_tmp_name, $imagen_libro_folder);
+                                    $message[] = 'Nuevo archivo añadido';
+                                } else {
+                                    $message[] = 'No se pudo añadir archivo';
+                                }
+                            }
+
+                            if (isset($message)) {
+                                foreach($message as $message) {
+                                    echo '<span class="alert alert-warning alert-dismissible fade show" >'.$message.'</span>';
+                                }
+                            }
+
+                        }
+
+                 ?>
+
+                     <!--  /////////////////////     Agregar Articulos   /////////////////     -->
+
+          <!--  <div>
+                <h2>Articulos</h2>
+                <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" enctype="multipart/form-data" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="nombre_articulo" placeholder="Nombre" class="form-control my-4" />
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="fecha_publicacion_articulo" placeholder="Fecha" class="form-control my-4" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="categoria_articulo" placeholder="Categoria" class="form-control my-4" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="descripcion_articulo" placeholder="Descripción" class="form-control my-4" />
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="url_descarga_articulo" class="form-control my-4" accept=".pdf"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="imagen_articulo" class="form-control my-4" accept="image/png, image/jpg, image/jpeg" />
+                    </div>
+                    <button class="btn btn-dark" type="submit" name="articulo">Submit</button>
+                </form>
+            </div>  -->
+            <?php
+                        if (isset($_POST['articulo'])) {
+                            $nombre_articulo = $_POST['nombre_articulo'];
+                            $fecha_publicacion_articulo = $_POST['fecha_publicacion_articulo'];
+                            $categoria_articulo = $_POST['categoria_articulo'];
+                            $descripcion_articulo = $_POST['descripcion_articulo'];
+                            $url_descarga_articulo = $_FILES['url_descarga_articulo']['name'];
+                            $url_descarga_articulo_tmp_name = $_FILES['url_descarga_articulo']['tmp_name'];
+                            $url_descarga_articulo_folder = 'articulos/docs/'.$url_descarga_articulo;
+                            $imagen_articulo = $_FILES['imagen_articulo']['name'];
+                            $imagen_articulo_tmp_name = $_FILES['imagen_articulo']['tmp_name'];
+                            $imagen_articulo_folder = 'articulos/images/'.$imagen_articulo;
+
+                            if (empty($url_descarga_articulo) || empty($imagen_articulo)) {
+                                $message[] = 'Llena los campos de archivos';
+                            } else {
+                                $insert_articulo = "INSERT INTO articulos (nombre, fecha_publicacion, categoria, descripcion, url_descarga, imagen) values ('$nombre_articulo', '$fecha_publicacion_articulo', '$categoria_articulo', '$descripcion_articulo', '$url_descarga_articulo', '$imagen_articulo')";
+                                $upload_articulo = mysqli_query($conn, $insert_articulo);
+
+                                if ($upload_articulo) {
+                                    move_uploaded_file($url_descarga_articulo_tmp_name, $url_descarga_articulo_folder);
+                                    move_uploaded_file($imagen_articulo_tmp_name, $imagen_articulo_folder);
+                                    $message[] = 'Nuevo archivo añadido';
+                                } else {
+                                    $message[] = 'No se pudo añadir archivo';
+                                }
+                            }
+
+                            if (isset($message)) {
+                                foreach($message as $message) {
+                                    echo '<span class="alert alert-warning alert-dismissible fade show" >'.$message.'</span>';
+                                }
+                            }
+
+                        }
+
+                 ?>
+
+                <!--  /////////////////////   Mostrar Investigaciones /////////////////   -->
+
+                <div id="Investigaciones">
+                    <div class="cards">
+                        <?php
+                            $select = mysqli_query($conn, "SELECT * FROM investigaciones");
+
+                            while($row = mysqli_fetch_assoc($select)) {
+                        ?>
+                            <div class="card__container">
+                                <div class="card">
+                                    <figure>
+                                        <img src="investigaciones/images/<?php echo $row['imagen']; ?>" class="card__img"/>
+                                    </figure>
+                                    <div class="card__paragraph">
+                                        <h4 class="card__title"><?php echo $row['nombre']; ?></h4>
+                                        <a href="#" class="modal__open" >Leer Más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal">
+                                <div class="modal__container">
+                                    <iframe src="investigaciones/docs/<?php echo $row['url_descarga']; ?>" class="modal__pdf" ></iframe>
+                                    <a href="#" class="modal__close"  >Cerrar PDF</a>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+
+                <!--  /////////////////////   Mostrar Libros /////////////////     -->
+
+                <div id="Libros" class="hidden" >
+                    <div class="cards">
+                        <?php
+                            $libro = mysqli_query($conn, "SELECT * FROM libros");
+
+                            while($libros = mysqli_fetch_assoc($libro)) {
+                        ?>
+                            <div class="card__container">
+                                <div class="card">
+                                    <figure>
+                                        <img src="libros/images/<?php echo $libros['imagen']; ?>" class="card__img"/>
+                                    </figure>
+                                    <div class="card__paragraph">
+                                        <h4 class="card__title"><?php echo $libros['titulo']; ?></h4>
+                                        <a href="#" class="modal__open" >Leer Más</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="modal">
+                                <div class="modal__container">
+                                    <iframe src="libros/docs/<?php echo $libros['url_descarga']; ?>" class="modal__pdf" ></iframe>
+                                    <a href="#" class="modal__close" >Cerrar PDF</a>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+
+                <!--  /////////////////////   Mostrar Articulos /////////////////     -->
+
+                <div id="Articulos" class="hidden" >
+                    <div class="cards">
+                        <?php
+                            $articulo = mysqli_query($conn, "SELECT * FROM articulos");
+
+                            while($articulos = mysqli_fetch_assoc($articulo)) {
+                        ?>
+                            <div class="card__container">
+                                <div class="card">
+                                    <figure>
+                                        <img src="articulos/images/<?php echo $articulos['imagen']; ?>" class="card__img"/>
+                                    </figure>
+                                    <div class="card__paragraph">
+                                        <h4 class="card__title"><?php echo $articulos['nombre']; ?></h4>
+                                        <a href="#" class="modal__open" >Leer Más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal">
+                                <div class="modal__container">
+                                    <iframe src="articulos/docs/<?php echo $articulos['url_descarga']; ?>" class="modal__pdf" ></iframe>
+                                    <a href="#" class="modal__close" >Cerrar PDF</a>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+
         </div>
 
     </div>
@@ -456,6 +631,7 @@
         </nav>
     </footer>
     <script src="./js/funciones.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
