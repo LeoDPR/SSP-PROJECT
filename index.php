@@ -158,7 +158,7 @@
         <main id="main__trabajos">
             <section class="info__trabajo">
                 <div class="info__container">
-                    <figure class="info__picture">
+                    <!--<figure class="info__picture">
                         <img src="./images/libros/modelo de interaccion.jpg" alt="imagen de trabajo" class="info__img">
                     </figure>
                     <div class="titulo__descripcion">
@@ -169,7 +169,7 @@
                             t, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec
                             eros lorem, blandi
                             t ac commodo at, malesuada et mauris.</p>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </main>
@@ -210,10 +210,10 @@
                             $descripcion = $_POST['descripcion'];
                             $url_descarga = $_FILES['url_descarga']['name'];
                             $url_descarga_tmp_name = $_FILES['url_descarga']['tmp_name'];
-                            $url_descarga_folder = 'investigaciones/docs/'.$url_descarga;
+                            $url_descarga_folder = 'trabajos/investigaciones/docs/'.$url_descarga;
                             $imagen = $_FILES['imagen']['name'];
                             $imagen_tmp_name = $_FILES['imagen']['tmp_name'];
-                            $imagen_folder = 'investigaciones/images/'.$imagen;
+                            $imagen_folder = 'trabajos/investigaciones/images/'.$imagen;
 
                             if (empty($url_descarga) || empty($imagen)) {
                                 $message[] = 'Llena los campos de archivos';
@@ -274,10 +274,10 @@
                             $fecha_publicacion_libro = $_POST['fecha_publicacion_libro'];
                             $url_descarga_libro = $_FILES['url_descarga_libro']['name'];
                             $url_descarga_libro_tmp_name = $_FILES['url_descarga_libro']['tmp_name'];
-                            $url_descarga_libro_folder = 'libros/docs/'.$url_descarga_libro;
+                            $url_descarga_libro_folder = 'trabajos/libros/docs/'.$url_descarga_libro;
                             $imagen_libro = $_FILES['imagen_libro']['name'];
                             $imagen_libro_tmp_name = $_FILES['imagen_libro']['tmp_name'];
-                            $imagen_libro_folder = 'libros/images/'.$imagen_libro;
+                            $imagen_libro_folder = 'trabajos/libros/images/'.$imagen_libro;
 
                             if (empty($url_descarga_libro) || empty($imagen_libro)) {
                                 $message[] = 'Llena los campos de archivos';
@@ -338,10 +338,10 @@
                             $descripcion_articulo = $_POST['descripcion_articulo'];
                             $url_descarga_articulo = $_FILES['url_descarga_articulo']['name'];
                             $url_descarga_articulo_tmp_name = $_FILES['url_descarga_articulo']['tmp_name'];
-                            $url_descarga_articulo_folder = 'articulos/docs/'.$url_descarga_articulo;
+                            $url_descarga_articulo_folder = 'trabajos/articulos/docs/'.$url_descarga_articulo;
                             $imagen_articulo = $_FILES['imagen_articulo']['name'];
                             $imagen_articulo_tmp_name = $_FILES['imagen_articulo']['tmp_name'];
-                            $imagen_articulo_folder = 'articulos/images/'.$imagen_articulo;
+                            $imagen_articulo_folder = 'trabajos/articulos/images/'.$imagen_articulo;
 
                             if (empty($url_descarga_articulo) || empty($imagen_articulo)) {
                                 $message[] = 'Llena los campos de archivos';
@@ -380,17 +380,17 @@
                             <div class="card__container">
                                 <div class="card">
                                     <figure>
-                                        <img src="investigaciones/images/<?php echo $row['imagen']; ?>" class="card__img"/>
+                                        <img src="trabajos/investigaciones/images/Riti.png" class="card__img"/>
                                     </figure>
                                     <div class="card__paragraph">
-                                        <h4 class="card__title"><?php echo $row['nombre']; ?></h4>
+                                        <h4 class="card__title"><?php echo $row['titulo']; ?></h4>
                                         <a href="#" class="modal__open" >Leer Más</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal">
                                 <div class="modal__container">
-                                    <iframe src="investigaciones/docs/<?php echo $row['url_descarga']; ?>" class="modal__pdf" ></iframe>
+                                    <iframe src="trabajos/investigaciones/docs/<?php echo $row['url_descarga']; ?>" class="modal__pdf" ></iframe>
                                     <a href="#" class="modal__close"  >Cerrar PDF</a>
                                 </div>
                             </div>
@@ -410,7 +410,7 @@
                             <div class="card__container">
                                 <div class="card">
                                     <figure>
-                                        <img src="libros/images/<?php echo $libros['imagen']; ?>" class="card__img"/>
+                                        <img src="trabajos/libros/images/<?php echo $libros['imagen']; ?>" class="card__img"/>
                                     </figure>
                                     <div class="card__paragraph">
                                         <h4 class="card__title"><?php echo $libros['titulo']; ?></h4>
@@ -420,7 +420,7 @@
                             </div> 
                             <div class="modal">
                                 <div class="modal__container">
-                                    <iframe src="libros/docs/<?php echo $libros['url_descarga']; ?>" class="modal__pdf" ></iframe>
+                                    <iframe src="trabajos/libros/docs/<?php echo $libros['url_descarga']; ?>" class="modal__pdf" ></iframe>
                                     <a href="#" class="modal__close" >Cerrar PDF</a>
                                 </div>
                             </div>
@@ -440,7 +440,7 @@
                             <div class="card__container">
                                 <div class="card">
                                     <figure>
-                                        <img src="articulos/images/<?php echo $articulos['imagen']; ?>" class="card__img"/>
+                                        <img src="trabajos/articulos/images/<?php echo $articulos['imagen']; ?>" class="card__img"/>
                                     </figure>
                                     <div class="card__paragraph">
                                         <h4 class="card__title"><?php echo $articulos['nombre']; ?></h4>
