@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/views.js"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> -->
 </head>
 
@@ -69,37 +70,8 @@
             <section class="news  container">
                 <div class="news__container">
                     <h2 class="subtitle2">Noticias/Eventos</h2>
-                    <div class="articles__news">
-                        <article>
-                            <img src="./images/varias/event.jpg" class="news__image" alt="evento">
-                            <h3 class="subtitle3">Lorem Ipsum</h3>
-                            <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                pulvinar
-                                tempus est, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec eros
-                                lorem,
-                                blandit ac commodo at, malesuada et mauris.</p>
-                        </article>
-
-                        <article>
-                            <img src="./images/varias/event.jpg" class="news__image" alt="evento">
-                            <h3 class="subtitle3">Lorem Ipsum</h3>
-                            <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                pulvinar
-                                tempus est, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec eros
-                                lorem,
-                                blandit ac commodo at, malesuada et mauris.</p>
-                        </article>
-
-                        <article>
-                            <img src="./images/varias/event.jpg" class="news__image" alt="evento">
-                            <h3 class="subtitle3">Lorem Ipsum</h3>
-                            <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                                pulvinar
-                                tempus est, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec eros
-                                lorem,
-                                blandit ac commodo at, malesuada et mauris.</p>
-
-                        </article>
+                    <div class="articles__news" id="articles-news">
+                      
                     </div>
                 </div>
             </section>
@@ -630,6 +602,7 @@
             </table>
         </nav>
     </footer>
+
     <script src="./js/funciones.js"></script>
     <script src="./js/main.js"></script>
 </body>

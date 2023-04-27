@@ -261,7 +261,7 @@ th, td {
 .articles__news {
     padding-top: 60px;
     display: grid;
-    line-height: 3em;
+    line-height: 1.7em;
     width: 150vh;
     margin: 0 auto;
     gap: 2em;
