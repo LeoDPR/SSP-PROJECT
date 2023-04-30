@@ -2,7 +2,7 @@ const openModal = document.querySelector('.modal__open');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal__close');
 
-openModal.addEventListener('click', (e) => {
+/*openModal.addEventListener('click', (e) => {
     e.preventDefault(e);
     modal.classList.add('modal__show');
 });
@@ -10,7 +10,7 @@ openModal.addEventListener('click', (e) => {
 closeModal.addEventListener('click', (e) => {
     e.preventDefault(e);
     modal.classList.remove('modal__show');
-});
+});*/
 
 function mostrar_ocultarInvestigaciones() {
     document.getElementById('Investigaciones').classList.remove("hidden");
@@ -30,6 +30,11 @@ function mostrar_ocultarArticulos() {
     document.getElementById('Articulos').classList.remove("hidden");
 }
 
+function mostrar_ocultarDocumentos() {
+    document.getElementById('Documentos').classList.remove("hidden");
+    document.getElementById('Trabajos').classList.add("hidden");
+}
+
 /*function mostrar_trabajos(e) {
     e.preventDefault();
     document.querySelector('.modal__open').classList.add('modal__show');
@@ -39,3 +44,17 @@ function ocultar_trabajos(e) {
     e.preventDefault();
     document.querySelector('modal__close').classList.remove('modal__show');
 }*/
+
+/*$(document).ready(function() {
+
+    $('#inv').submit(function(e) {
+        const titulo = $('#titulo').val();
+        $.post('./views/documentos.php', titulo, function (response) {
+           
+            console.log(response);
+            
+        });
+        e.preventDefault();
+    })
+
+})*/
