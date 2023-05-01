@@ -3,7 +3,7 @@ function sendRequest(name, type) {
     var trabajo = type;
     console.log(info);
     var object = new XMLHttpRequest();
-    object.open('POST', './views/documentos.php', true);
+    object.open('POST', './views/show_documents.php', true);
     object.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     object.send('investigacion=' + info + '&tipo=' + trabajo);
     object.onreadystatechange = function () {

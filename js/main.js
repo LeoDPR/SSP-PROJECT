@@ -1,7 +1,7 @@
 const openModal = document.querySelector('.modal__open');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal__close');
-
+ 
 /*openModal.addEventListener('click', (e) => {
     e.preventDefault(e);
     modal.classList.add('modal__show');

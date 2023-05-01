@@ -1,4 +1,4 @@
-fetch('.\\views\\noticias.php')
+fetch('.\\views\\show_news.php')
 
     .then(response => response.json())
     .then(data => {
@@ -8,7 +8,7 @@ fetch('.\\views\\noticias.php')
             const img = document.createElement('img');
             const h3 = document.createElement('h3');
             const p = document.createElement('p');
-            img.src = "./images/eventos/" + noticia.imagen_evento;
+            img.src = "./images/eventos/"+noticia.imagen_evento;
             img.classList.add('news__image');
             h3.classList.add('subtitle3');
             h3.textContent = noticia.nombre;
@@ -17,10 +17,6 @@ fetch('.\\views\\noticias.php')
             article.appendChild(img);
             article.appendChild(h3);
             article.appendChild(p);
-            article.addEventListener('click', () => {
-                const url = `noticia.html?id=${noticia.id}&nombre=${noticia.nombre}`;
-                window.location.href = url;
-            });
             noticiasDiv.appendChild(article);
         });
     })

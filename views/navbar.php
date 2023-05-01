@@ -5,13 +5,13 @@
 
             <ul class="nav__link nav__link--menu">
                 <li class="nav__items">
-                    <a href="#Inicio" class="nav__links" onclick="mostrar_ocultarInicio()">Inicio</a>
+                    <a href="index.php" class="nav__links" onclick="mostrar_ocultarInicio()">Inicio</a>
                 </li>
                 <li class="nav__items">
                     <a href="#Noticias" class="nav__links" onclick="mostrar_ocultarNoticias()">Noticias</a>
                 </li>
                 <li class="nav__items">
-                    <a href="#Trabajos" class="nav__links" onclick="mostrar_ocultarTrabajos()">Trabajos</a>
+                    <a href="Trabajos.php" class="nav__links">Trabajos</a>
                 </li>
                 <li class="nav__items">
                     <a href="#Miembros" class="nav__links" onclick="mostrar_ocultarMiembros()">Miembros</a>
@@ -20,6 +20,6 @@
                     <a href="#Contacto" class="nav__links" onclick="mostrar_ocultarContacto()">Contacto</a>
                 </li>
                 <li class="nav__items">
-                    <a href="#Nosotros" class="nav__links" onclick="mostrar_ocultarNosotros()">Nosotros</a>
+                    <a href="Nosotros.php" class="nav__links" onclick="mostrar_ocultarNosotros()">Nosotros</a>
             </ul>
         </nav>

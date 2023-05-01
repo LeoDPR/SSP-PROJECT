@@ -1,5 +1,5 @@
 <?php
-include('./config.php');
+    include ('./config.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,16 +13,16 @@ include('./config.php');
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/views.js"></script>
+
   </head>
   <body>
     <?php include './views/navbar.php'; ?>
     
     
 
-    <!-- //////////Trabajos////////////// -->
+   <!-- //////////Trabajos////////////// -->
 
-    <div id="Trabajos" class="">
+   <div id="Trabajos" class="">
         <aside class="sidebar">
             <ul class="aside__list">
                 <li class="sidebar__item">
@@ -55,116 +55,88 @@ include('./config.php');
             </section>
         </main>
 
-        
         <!--  /////////////////////   Mostrar Investigaciones /////////////////   -->
+
+        <!--  /////////////////////   Idea para mostrar, hacer 3 funciones, 1 para comparar /////////////////   -->
 
         <div id="Investigaciones">
             <div class="cards">
                 <?php
-                $select = mysqli_query($conn, "SELECT * FROM investigaciones");
+                    $select = mysqli_query($conn, "SELECT * FROM investigaciones");
 
-                while ($row = mysqli_fetch_assoc($select)) {
-                    ?>
+                    while($row = mysqli_fetch_assoc($select)) {
+                ?>
+                
                     <div class="card__container">
                         <div class="card">
                             <figure>
-                                <img src="trabajos/investigaciones/images/Riti.png" class="card__img" />
+                                <img src="trabajos/investigaciones/images/Riti.png" class="card__img"/>
                             </figure>
                             <div class="card__paragraph">
-                                <h4 class="card__title">
-                                    <?php echo $row['titulo']; ?>
-                                </h4>
-                                <a href="#" class="modal__open">Leer Más</a>
+                                <h4 class="card__title"><?php echo $row['titulo']; ?></h4>
+                                <input type="hidden" name="titulo" value="<?php echo $row['titulo']; ?>" />
+                                <a href="info_trabajo.php?titulo=<?php echo $row['titulo']; ?>&tipo=investigacion" class="modal__open">Leer Más</a>
                             </div>
                         </div>
                     </div>
-                    <div class="modal">
-                        <div class="modal__container">
-                            <iframe src="trabajos/investigaciones/docs/<?php echo $row['url_descarga']; ?>"
-                                class="modal__pdf"></iframe>
-                            <a href="#" class="modal__close">Cerrar PDF</a>
-                        </div>
-                    </div>
-                <?php } ?>
+                <?php }; ?>
             </div>
         </div>
 
-        <!--  /////////////////////   Mostrar Libros /////////////////     -->
+        <!--  ///////////////////// Mostrar Libros /////////////////   -->
 
         <div id="Libros" class="hidden">
             <div class="cards">
                 <?php
-                $libro = mysqli_query($conn, "SELECT * FROM libros");
+                    $libro = mysqli_query($conn, "SELECT * FROM libros");
 
-                while ($libros = mysqli_fetch_assoc($libro)) {
-                    ?>
+                    while($libros = mysqli_fetch_assoc($libro)) {
+                ?>
                     <div class="card__container">
                         <div class="card">
                             <figure>
-                                <img src="trabajos/libros/images/<?php echo $libros['imagen']; ?>" class="card__img" />
+                                <img src="trabajos/libros/images/<?php echo $libros['imagen']; ?>" class="card__img"/>
                             </figure>
                             <div class="card__paragraph">
-                                <h4 class="card__title">
-                                    <?php echo $libros['titulo']; ?>
-                                </h4>
-                                <a href="#" class="modal__open">Leer Más</a>
+                                <h4 class="card__title"><?php echo $libros['titulo']; ?></h4>
+                                <a href="info_trabajo.php?titulo=<?php echo $libros['titulo']; ?>&tipo=libro" class="modal__open">Leer Más</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal">
-                        <div class="modal__container">
-                            <iframe src="trabajos/libros/docs/<?php echo $libros['url_descarga']; ?>"
-                                class="modal__pdf"></iframe>
-                            <a href="#" class="modal__close">Cerrar PDF</a>
-                        </div>
-                    </div>
-                <?php } ?>
+                    </div> 
+                <?php }; ?>
             </div>
         </div>
 
-        <!--  /////////////////////   Mostrar Articulos /////////////////     -->
+        <!--  /////////////////////   Mostrar Articulos /////////////////   -->
 
         <div id="Articulos" class="hidden">
             <div class="cards">
                 <?php
-                $articulo = mysqli_query($conn, "SELECT * FROM articulos");
+                    $articulo = mysqli_query($conn, "SELECT * FROM articulos");
 
-                while ($articulos = mysqli_fetch_assoc($articulo)) {
-                    ?>
+                    while($articulos = mysqli_fetch_assoc($articulo)) {
+                ?>
                     <div class="card__container">
                         <div class="card">
                             <figure>
-                                <img src="trabajos/articulos/images/<?php echo $articulos['imagen']; ?>"
-                                    class="card__img" />
+                                <img src="trabajos/articulos/images/<?php echo $articulos['imagen']; ?>" class="card__img"/>
                             </figure>
                             <div class="card__paragraph">
-                                <h4 class="card__title">
-                                    <?php echo $articulos['nombre']; ?>
-                                </h4>
-                                <a href="#" class="modal__open">Leer Más</a>
+                                <h4 class="card__title"><?php echo $articulos['nombre']; ?></h4>
+                                <a href="info_trabajo.php?titulo=<?php echo $articulos['nombre']; ?>&tipo=articulo" class="modal__open">Leer Más</a>
                             </div>
                         </div>
                     </div>
-                    <div class="modal">
-                        <div class="modal__container">
-                            <iframe src="articulos/docs/<?php echo $articulos['url_descarga']; ?>"
-                                class="modal__pdf"></iframe>
-                            <a href="#" class="modal__close">Cerrar PDF</a>
-                        </div>
-                    </div>
-                <?php } ?>
+                <?php }; ?>
             </div>
         </div>
-
-    </div>
-
     </div>
 
 
-
-
-    <?php include './views/footer.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
+    <?php include './views/footer.php'; ?> <!-- Sirve para mostrar el footer -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./js/funciones.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
