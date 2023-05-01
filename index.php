@@ -1,15 +1,26 @@
 <?php
-include('./config.php');
 
-if (isset($_GET['delete'])) {
+    include ('./config.php');
 
-    $id = $_GET['delete'];
+    if (isset($_GET['page_view'])) {
 
-    mysqli_query($conn, "DELETE FROM investigaciones WHERE id_investigacion = $id");
-    header('location:index.php');
+        $titulo = $_GET['page_view'];
 
-}
-;
+        header('location: index.php#Documentos');
+
+        /*if ($investigacion = mysqli_query($conn, "SELECT * FROM investigaciones WHERE titulo = $titulo")) {
+
+            header('location: index.php#Documentos');
+
+        } elseif ($lib = mysqli_query($conn, "SELECT * FROM libros WHERE titulo = $titulo")) {
+            # code...
+        } elseif ($art = mysqli_query($conn, "SELECT * FROM articulos WHERE nombre = $titulo")) {
+            # code...
+        }*/
+
+    }
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +35,7 @@ if (isset($_GET['delete'])) {
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/sheet.css">
     <script src="./js/views.js"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> -->
 </head>
@@ -126,302 +138,83 @@ if (isset($_GET['delete'])) {
             </section>
         </main>
 
-        <!--  /////////////////////     Agregar Investigaciones /////////////////     -->
-
-        <!-- <div>
-            <h1>Registros</h1>
-            <div>
-                <h2>Investigaciones</h2>
-                <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="w-50" enctype="multipart/form-data" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="nombre" placeholder="Nombre" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="date" name="fecha_publicacion" placeholder="Fecha" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="categoria" placeholder="Categoria" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="descripcion" placeholder="Descripción" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="file" name="url_descarga" placeholder="Nombre" class="form-control my-4" accept=".pdf"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="file" name="imagen" placeholder="Nombre" class="form-control my-4" accept="image/png, image/jpg, image/jpeg" />
-                    </div>
-                    <button class="btn btn-dark" type="submit" name="submit">Submit</button>
-                </form>
-            </div> -->
-        <?php
-        if (isset($_POST['submit'])) {
-            $nombre = $_POST['nombre'];
-            $fecha_publicacion = $_POST['fecha_publicacion'];
-            $categoria = $_POST['categoria'];
-            $descripcion = $_POST['descripcion'];
-            $url_descarga = $_FILES['url_descarga']['name'];
-            $url_descarga_tmp_name = $_FILES['url_descarga']['tmp_name'];
-            $url_descarga_folder = 'trabajos/investigaciones/docs/' . $url_descarga;
-            $imagen = $_FILES['imagen']['name'];
-            $imagen_tmp_name = $_FILES['imagen']['tmp_name'];
-            $imagen_folder = 'trabajos/investigaciones/images/' . $imagen;
-
-            if (empty($url_descarga) || empty($imagen)) {
-                $message[] = 'Llena los campos de archivos';
-            } else {
-                $insert = "INSERT INTO investigaciones (nombre, fecha_publicacion, categoria, descripcion, url_descarga, imagen) values ('$nombre', '$fecha_publicacion', '$categoria', '$descripcion', '$url_descarga', '$imagen')";
-                $upload = mysqli_query($conn, $insert);
-
-                if ($upload) {
-                    move_uploaded_file($url_descarga_tmp_name, $url_descarga_folder);
-                    move_uploaded_file($imagen_tmp_name, $imagen_folder);
-                    $message[] = 'Nuevo archivo añadido';
-                } else {
-                    $message[] = 'No se pudo añadir archivo';
-                }
-            }
-
-            if (isset($message)) {
-                foreach ($message as $message) {
-                    echo '<span class="alert alert-warning alert-dismissible fade show" >' . $message . '</span>';
-                }
-            }
-
-        }
-
-        ?>
-
-        <!--  /////////////////////     Agregar Libros   /////////////////     -->
-
-        <!--  <div>
-                <h2>Libros</h2>
-                <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" enctype="multipart/form-data" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="titulo" placeholder="Titulo" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="descripcion_libro" placeholder="Descripción" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="categoria_libro" placeholder="Categoria" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="date" name="fecha_publicacion_libro" placeholder="Fecha" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="file" name="url_descarga_libro" class="form-control my-4" accept=".pdf"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="file" name="imagen_libro" class="form-control my-4" accept="image/png, image/jpg, image/jpeg" />
-                    </div>
-                    <button class="btn btn-dark" type="submit" name="libro">Submit</button>
-                </form>
-            </div>  -->
-        <?php
-        if (isset($_POST['libro'])) {
-            $titulo = $_POST['titulo'];
-            $descripcion_libro = $_POST['descripcion_libro'];
-            $categoria_libro = $_POST['categoria_libro'];
-            $fecha_publicacion_libro = $_POST['fecha_publicacion_libro'];
-            $url_descarga_libro = $_FILES['url_descarga_libro']['name'];
-            $url_descarga_libro_tmp_name = $_FILES['url_descarga_libro']['tmp_name'];
-            $url_descarga_libro_folder = 'trabajos/libros/docs/' . $url_descarga_libro;
-            $imagen_libro = $_FILES['imagen_libro']['name'];
-            $imagen_libro_tmp_name = $_FILES['imagen_libro']['tmp_name'];
-            $imagen_libro_folder = 'trabajos/libros/images/' . $imagen_libro;
-
-            if (empty($url_descarga_libro) || empty($imagen_libro)) {
-                $message[] = 'Llena los campos de archivos';
-            } else {
-                $insert_libro = "INSERT INTO libros (titulo, descripcion, categoria, fecha_publicacion, url_descarga, imagen) values ('$titulo', '$descripcion_libro', '$categoria_libro', '$fecha_publicacion_libro', '$url_descarga_libro', '$imagen_libro')";
-                $upload_libro = mysqli_query($conn, $insert_libro);
-
-                if ($upload_libro) {
-                    move_uploaded_file($url_descarga_libro_tmp_name, $url_descarga_libro_folder);
-                    move_uploaded_file($imagen_libro_tmp_name, $imagen_libro_folder);
-                    $message[] = 'Nuevo archivo añadido';
-                } else {
-                    $message[] = 'No se pudo añadir archivo';
-                }
-            }
-
-            if (isset($message)) {
-                foreach ($message as $message) {
-                    echo '<span class="alert alert-warning alert-dismissible fade show" >' . $message . '</span>';
-                }
-            }
-
-        }
-
-        ?>
-
-        <!--  /////////////////////     Agregar Articulos   /////////////////     -->
-
-        <!--  <div>
-                <h2>Articulos</h2>
-                <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" enctype="multipart/form-data" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="nombre_articulo" placeholder="Nombre" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="date" name="fecha_publicacion_articulo" placeholder="Fecha" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="categoria_articulo" placeholder="Categoria" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="descripcion_articulo" placeholder="Descripción" class="form-control my-4" />
-                    </div>
-                    <div class="form-group">
-                        <input type="file" name="url_descarga_articulo" class="form-control my-4" accept=".pdf"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="file" name="imagen_articulo" class="form-control my-4" accept="image/png, image/jpg, image/jpeg" />
-                    </div>
-                    <button class="btn btn-dark" type="submit" name="articulo">Submit</button>
-                </form>
-            </div>  -->
-        <?php
-        if (isset($_POST['articulo'])) {
-            $nombre_articulo = $_POST['nombre_articulo'];
-            $fecha_publicacion_articulo = $_POST['fecha_publicacion_articulo'];
-            $categoria_articulo = $_POST['categoria_articulo'];
-            $descripcion_articulo = $_POST['descripcion_articulo'];
-            $url_descarga_articulo = $_FILES['url_descarga_articulo']['name'];
-            $url_descarga_articulo_tmp_name = $_FILES['url_descarga_articulo']['tmp_name'];
-            $url_descarga_articulo_folder = 'trabajos/articulos/docs/' . $url_descarga_articulo;
-            $imagen_articulo = $_FILES['imagen_articulo']['name'];
-            $imagen_articulo_tmp_name = $_FILES['imagen_articulo']['tmp_name'];
-            $imagen_articulo_folder = 'trabajos/articulos/images/' . $imagen_articulo;
-
-            if (empty($url_descarga_articulo) || empty($imagen_articulo)) {
-                $message[] = 'Llena los campos de archivos';
-            } else {
-                $insert_articulo = "INSERT INTO articulos (nombre, fecha_publicacion, categoria, descripcion, url_descarga, imagen) values ('$nombre_articulo', '$fecha_publicacion_articulo', '$categoria_articulo', '$descripcion_articulo', '$url_descarga_articulo', '$imagen_articulo')";
-                $upload_articulo = mysqli_query($conn, $insert_articulo);
-
-                if ($upload_articulo) {
-                    move_uploaded_file($url_descarga_articulo_tmp_name, $url_descarga_articulo_folder);
-                    move_uploaded_file($imagen_articulo_tmp_name, $imagen_articulo_folder);
-                    $message[] = 'Nuevo archivo añadido';
-                } else {
-                    $message[] = 'No se pudo añadir archivo';
-                }
-            }
-
-            if (isset($message)) {
-                foreach ($message as $message) {
-                    echo '<span class="alert alert-warning alert-dismissible fade show" >' . $message . '</span>';
-                }
-            }
-
-        }
-
-        ?>
-
         <!--  /////////////////////   Mostrar Investigaciones /////////////////   -->
+
+        <!--  /////////////////////   Idea para mostrar, hacer 3 funciones, 1 para comparar /////////////////   -->
 
         <div id="Investigaciones">
             <div class="cards">
                 <?php
-                $select = mysqli_query($conn, "SELECT * FROM investigaciones");
+                    $select = mysqli_query($conn, "SELECT * FROM investigaciones");
 
-                while ($row = mysqli_fetch_assoc($select)) {
-                    ?>
+                    while($row = mysqli_fetch_assoc($select)) {
+                ?>
+                
                     <div class="card__container">
                         <div class="card">
                             <figure>
-                                <img src="trabajos/investigaciones/images/Riti.png" class="card__img" />
+                                <img src="trabajos/investigaciones/images/Riti.png" class="card__img"/>
                             </figure>
                             <div class="card__paragraph">
-                                <h4 class="card__title">
-                                    <?php echo $row['titulo']; ?>
-                                </h4>
-                                <a href="#" class="modal__open">Leer Más</a>
+                                <h4 class="card__title"><?php echo $row['titulo']; ?></h4>
+                                <input type="hidden" name="titulo" value="<?php echo $row['titulo']; ?>" />
+                                <button onclick="sendRequest(); mostrar_ocultarDocumentos();" >Ajax</button>
+                                <a href="#Documentos?page_view=<?php echo $row['titulo']; ?>" class="modal__open" onclick="sendRequest('<?php echo $row['titulo']; ?>', 'investigacion'); mostrar_ocultarDocumentos();">Leer Más</a>
                             </div>
                         </div>
                     </div>
-                    <div class="modal">
-                        <div class="modal__container">
-                            <iframe src="trabajos/investigaciones/docs/<?php echo $row['url_descarga']; ?>"
-                                class="modal__pdf"></iframe>
-                            <a href="#" class="modal__close">Cerrar PDF</a>
-                        </div>
-                    </div>
-                <?php } ?>
+                <?php }; ?>
             </div>
         </div>
 
-        <!--  /////////////////////   Mostrar Libros /////////////////     -->
+        <!--  ///////////////////// Mostrar Libros /////////////////   -->
 
         <div id="Libros" class="hidden">
             <div class="cards">
                 <?php
-                $libro = mysqli_query($conn, "SELECT * FROM libros");
+                    $libro = mysqli_query($conn, "SELECT * FROM libros");
 
-                while ($libros = mysqli_fetch_assoc($libro)) {
-                    ?>
+                    while($libros = mysqli_fetch_assoc($libro)) {
+                ?>
                     <div class="card__container">
                         <div class="card">
                             <figure>
-                                <img src="trabajos/libros/images/<?php echo $libros['imagen']; ?>" class="card__img" />
+                                <img src="trabajos/libros/images/<?php echo $libros['imagen']; ?>" class="card__img"/>
                             </figure>
                             <div class="card__paragraph">
-                                <h4 class="card__title">
-                                    <?php echo $libros['titulo']; ?>
-                                </h4>
-                                <a href="#" class="modal__open">Leer Más</a>
+                                <h4 class="card__title"><?php echo $libros['titulo']; ?></h4>
+                                <a href="#Documentos?page_view=<?php echo $libros['titulo']; ?>" class="modal__open" onclick="sendRequest('<?php echo $libros['titulo']; ?>', 'libro'); mostrar_ocultarDocumentos();">Leer Más</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal">
-                        <div class="modal__container">
-                            <iframe src="trabajos/libros/docs/<?php echo $libros['url_descarga']; ?>"
-                                class="modal__pdf"></iframe>
-                            <a href="#" class="modal__close">Cerrar PDF</a>
-                        </div>
-                    </div>
-                <?php } ?>
+                    </div> 
+                <?php }; ?>
             </div>
         </div>
 
-        <!--  /////////////////////   Mostrar Articulos /////////////////     -->
+        <!--  /////////////////////   Mostrar Articulos /////////////////   -->
 
         <div id="Articulos" class="hidden">
             <div class="cards">
                 <?php
-                $articulo = mysqli_query($conn, "SELECT * FROM articulos");
+                    $articulo = mysqli_query($conn, "SELECT * FROM articulos");
 
-                while ($articulos = mysqli_fetch_assoc($articulo)) {
-                    ?>
+                    while($articulos = mysqli_fetch_assoc($articulo)) {
+                ?>
                     <div class="card__container">
                         <div class="card">
                             <figure>
-                                <img src="trabajos/articulos/images/<?php echo $articulos['imagen']; ?>"
-                                    class="card__img" />
+                                <img src="trabajos/articulos/images/<?php echo $articulos['imagen']; ?>" class="card__img"/>
                             </figure>
                             <div class="card__paragraph">
-                                <h4 class="card__title">
-                                    <?php echo $articulos['nombre']; ?>
-                                </h4>
-                                <a href="#" class="modal__open">Leer Más</a>
+                                <h4 class="card__title"><?php echo $articulos['nombre']; ?></h4>
+                                <button onclick="sendRequest()">Ajax</button>
+                                <a href="#Documentos?page_view=<?php echo $articulos['nombre']; ?>" class="modal__open" onclick="sendRequest('<?php echo $articulos['nombre']; ?>', 'articulo'); mostrar_ocultarDocumentos();">Leer Más</a>
                             </div>
                         </div>
                     </div>
-                    <div class="modal">
-                        <div class="modal__container">
-                            <iframe src="articulos/docs/<?php echo $articulos['url_descarga']; ?>"
-                                class="modal__pdf"></iframe>
-                            <a href="#" class="modal__close">Cerrar PDF</a>
-                        </div>
-                    </div>
-                <?php } ?>
+                <?php }; ?>
             </div>
         </div>
-
-    </div>
-
     </div>
 
 
@@ -577,10 +370,65 @@ if (isset($_GET['delete'])) {
         </div>
     </div>
 
+    <!-- //////////  Documentos  ///////// -->
+
+    <div id="Documentos" class="hidden">
+
+        <h1>Hola</h1>
+
+        <?php
+
+        if (isset($_GET['page_view'])) {
+
+            $titulo = $_GET['page_view'];
+
+            header('location: index.php#Documentos');
+
+            if ($investigacion = mysqli_query($conn, "SELECT * FROM investigaciones WHERE titulo = $titulo")) {
+
+                header('location: index.php#Documentos');
+
+            } elseif ($lib = mysqli_query($conn, "SELECT * FROM libros WHERE titulo = $titulo")) {
+                # code...
+            } elseif ($art = mysqli_query($conn, "SELECT * FROM articulos WHERE nombre = $titulo")) {
+                # code...
+            }
+
+        }
+
+            /*if (isset($_GET['page_view'])) {
+
+                if ($investigaciones = mysqli_fetch_assoc($investigacion)) {
+
+                    ?>
+
+                        <div class="inv">
+                            <p><?php echo $investigaciones['titulo']; ?></p>
+                        </div>
+
+                    <?php
+        
+                } elseif ($libs = mysqli_fetch_assoc($lib)) {
+                        
+                    echo "Estas en libros";
+        
+                } elseif ($arts = mysqli_fetch_assoc($art)) {
+                        
+                    echo "Estas en articulos";
+        
+                }
+
+            };*/
+
+        ?>
+
+    </div>
+
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
 
     <script src="./js/funciones.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
