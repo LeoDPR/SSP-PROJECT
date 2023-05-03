@@ -2,24 +2,6 @@
 
     include ('./config.php');
 
-    if (isset($_GET['page_view'])) {
-
-        $titulo = $_GET['page_view'];
-
-        
-
-        /*if ($investigacion = mysqli_query($conn, "SELECT * FROM investigaciones WHERE titulo = $titulo")) {
-
-            header('location: index.php#Documentos');
-
-        } elseif ($lib = mysqli_query($conn, "SELECT * FROM libros WHERE titulo = $titulo")) {
-            # code...
-        } elseif ($art = mysqli_query($conn, "SELECT * FROM articulos WHERE nombre = $titulo")) {
-            # code...
-        }*/
-
-    }
-    
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +16,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/sheet.css">
     <script src="./js/views.js"></script>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> -->
 </head>
 
 <body>

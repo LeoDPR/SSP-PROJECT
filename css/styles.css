@@ -1,3 +1,22 @@
+#Investigaciones {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: -1em;
+}
+
+#Libros {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#Articulos {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -57,22 +76,28 @@
 
 .cards {
     display: flex;
-    height: 100vh;
+    height: 100%;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
     width: 80%;
+    flex-wrap: wrap;
 }
 
 .card {
     width: 100%;
     border-radius: 6px;
-    margin: 50px;
+    margin: 25px;
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
     transition: all 400ms ease;
+    min-width: 100px;
+    max-width: 250px;
+    height: 100%;
+    min-height: 380px;
+    max-height: 600px;
 }
 
 .card:hover {
@@ -82,7 +107,9 @@
 
 .card__img {
     width: 100%;
-    height: 210px;
+    height: 235px;
+    min-height: 100px;
+    max-height: 300px;
 }
 
 .card__title {
@@ -94,6 +121,8 @@
 .card__paragraph {
     text-align: center;
     margin-bottom: 10px;
+    width: 100%;
+    height: 80%;
 }
 
 .modal__open {
@@ -112,15 +141,74 @@
     color: #fff;
 }
 
+/*---------------- Contenido de Documentos --------------------*/
+
 #Documentos {
     width: 100%;
     height: 100%; 
     margin: 0 auto;
-    background-color: blue;
 }
 
-.inv {
-    width: 90%;
-    height: 90%;
-    background-color: chocolate;
+.doc__summary {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
 }
+
+.doc__description {
+    margin-left: 5em;
+    width: 60%;
+}
+
+.doc__image {
+    width: 21em;
+    height: 23em;
+    margin-left: 2em;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 2px gray;
+}
+
+.doc__frame {
+    width: 720px;
+    height: 1080px;
+}
+
+.frame__container {
+    display: grid;
+    place-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.doc__title {
+    text-align: center;
+    margin: 2em;
+}
+
+.separator {
+    text-align: center;
+}
+
+.title__separator {
+    display: inline-block;
+    position: relative;
+}
+
+.title__separator::after, .title__separator::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: currentColor;
+    text-align: center;
+    top: 0.6em;
+}
+
+.title__separator::before {
+    left: -140px;
+}
+
+.title__separator::after {
+    right: -140px;
+}
+

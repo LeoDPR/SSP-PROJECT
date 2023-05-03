@@ -57,8 +57,6 @@
 
         <!--  /////////////////////   Mostrar Investigaciones /////////////////   -->
 
-        <!--  /////////////////////   Idea para mostrar, hacer 3 funciones, 1 para comparar /////////////////   -->
-
         <div id="Investigaciones">
             <div class="cards">
                 <?php
@@ -74,8 +72,7 @@
                             </figure>
                             <div class="card__paragraph">
                                 <h4 class="card__title"><?php echo $row['titulo']; ?></h4>
-                                <input type="hidden" name="titulo" value="<?php echo $row['titulo']; ?>" />
-                                <a href="info_trabajo.php?titulo=<?php echo $row['titulo']; ?>&tipo=investigacion" class="modal__open">Leer Más</a>
+                                <a href="info_trabajo.php?titulo=<?php echo $row['titulo']; ?>&tipo=Investigación" class="modal__open">Leer Más</a>
                             </div>
                         </div>
                     </div>
@@ -99,7 +96,7 @@
                             </figure>
                             <div class="card__paragraph">
                                 <h4 class="card__title"><?php echo $libros['titulo']; ?></h4>
-                                <a href="info_trabajo.php?titulo=<?php echo $libros['titulo']; ?>&tipo=libro" class="modal__open">Leer Más</a>
+                                <a href="info_trabajo.php?titulo=<?php echo $libros['titulo']; ?>&tipo=Libro" class="modal__open">Leer Más</a>
                             </div>
                         </div>
                     </div> 
@@ -123,7 +120,7 @@
                             </figure>
                             <div class="card__paragraph">
                                 <h4 class="card__title"><?php echo $articulos['nombre']; ?></h4>
-                                <a href="info_trabajo.php?titulo=<?php echo $articulos['nombre']; ?>&tipo=articulo" class="modal__open">Leer Más</a>
+                                <a href="info_trabajo.php?titulo=<?php echo $articulos['nombre']; ?>&tipo=Artículo" class="modal__open">Leer Más</a>
                             </div>
                         </div>
                     </div>
