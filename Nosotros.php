@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/navbar_footer.css">
     <link rel="stylesheet" href="./css/styles.css">
 
   </head>

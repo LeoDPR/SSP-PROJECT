@@ -11,15 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/navbar_footer.css">
     <link rel="stylesheet" href="./css/styles.css">
 
   </head>
   <body>
     <?php include './views/navbar.php'; ?>
     
-    
-
    <!-- //////////Trabajos////////////// -->
 
    <div id="Trabajos" class="">
@@ -36,24 +34,6 @@
                         onclick="mostrar_ocultarArticulos()">Articulos</a></li>
             </ul>
         </aside>
-        <main id="main__trabajos">
-            <section class="info__trabajo">
-                <div class="info__container">
-                    <!--<figure class="info__picture">
-                        <img src="./images/libros/modelo de interaccion.jpg" alt="imagen de trabajo" class="info__img">
-                    </figure>
-                    <div class="titulo__descripcion">
-                        <h3 class="subtitle3">Lorem Ipsum</h3>
-                        <p class="info__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Donec
-                            pulvinar tempus es
-                            t, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec
-                            eros lorem, blandi
-                            t ac commodo at, malesuada et mauris.</p>
-                    </div> -->
-                </div>
-            </section>
-        </main>
 
         <!--  /////////////////////   Mostrar Investigaciones /////////////////   -->
 

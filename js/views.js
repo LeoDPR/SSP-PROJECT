@@ -24,3 +24,4 @@ fetch('.\\views\\show_news.php')
         });
     })
     .catch(error => console.error(error));
+    

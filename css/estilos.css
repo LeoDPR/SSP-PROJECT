@@ -10,10 +10,7 @@
         transform: translateX(0);
     }
 }
-a{
-    text-decoration: none;
-    color: #000000;
-}
+
 @keyframes slideInUp {
     from {
         transform: translateY(-100px);
@@ -32,36 +29,9 @@ a{
     animation: slideInLeft 1s ease-in;
 }
 
-/*Utilizables*/
 
-.hidden {
-    display: none;
-}
+/*Estilos index*/
 
-.hide {
-    opacity: 0;
-    transition: all 1s;
-    filter: blur(5px);
-    transform: translateX(-300px);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translate(0);
-}
-
-/*Estilos*/
-
-:root{
-    --padding-container: 90px 0;
-    --color-title: #001A49;
-}
-
-body{
-    font-family: 'Poppins', sans-serif;
-}
 
 .container{
     width: 150vh;
@@ -82,106 +52,6 @@ body{
 }
 
 
-
-.nav{
-    padding-left: 10%;
-    padding-right: 10%;
-   --padding-container: 0; 
-   height: 10vh;
-   display: flex;
-   align-items: center;
-   background-color: #164950;
-}
-
-.nav__title{
-    font-weight: 300;
-}
-
-.nav__link{
-    margin-left: auto;
-    padding: 0;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 2em;
-}
-
-.nav__items{
-    list-style: none;
-}
-
-.nav__links{
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-    position: relative;
-}
-
-.nav__links::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffffff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.nav__links:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.nav__menu{
-    margin-left: auto;
-    cursor: pointer;
-    display: none;
-}
-
-.nav__img{
-    display: block;
-    width: 30px;
-}
-
-.nav__close{
-    display: var(--show, none);
-}
-
-
-/*Pie de pagina*/
-.footer {
-    margin: 0 auto; 
-   height: 40vh;
-   display: flex;
-   align-items: center;
-   background-color: #164950;
-   width: 100%;
-}
-
-.footer__table {
-    width: 100em;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    border-collapse: collapse;
-    color: white;
-}
-
-th, td {
-    padding: 7px;
-    width: 100em;
-}
-
-.social_media {
-    width: 45px;
-    height: 45px;
-}
-
-
 /*CONTENIDO*/
 #Noticias {
     width: 100%;
@@ -199,11 +69,6 @@ th, td {
     position: relative;
 }
 
-#Trabajos {
-    height: 100%;
-    margin: 0 auto;
-    width: 150vh;
-}
 
 #Contacto {
     width: 100%;
@@ -288,8 +153,6 @@ th, td {
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
     }
     
-    
-    
     .about__paragraph{
         line-height: 1.5;
     }
@@ -325,102 +188,6 @@ th, td {
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
     }
 
-    /*Contenido de TRABAJOS*/
-    #main__trabajos{
-        width: 75%;
-        float: left;
-    }
-    .sidebar {
-        width: 25%;
-        float: left;
-        position: relative;
-        width: 11rem; 
-        height: 400px; 
-        left: 0; 
-        top: 2em; 
-      }
-
-      .aside__list{
-        margin-left: auto;
-        padding: 0;
-        }
-      
-      .sidebar__item{
-        line-height: 2em;
-        list-style: none;
-        padding: 10px; /* agregar relleno a los elementos de la lista */
-        border-bottom: 1px solid #ccc; /* agregar borde inferior a los elementos de la lista */
-      }
-      
-      .aside__links{
-        text-decoration: none;
-        color: #000000;
-        display: inline-block;
-        position: relative;
-    }
-    
-    .aside__links::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #000000;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
-    
-    .aside__links:hover::after{
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-/*contenedor de la informacion de los trabajos*/
-    #main__trabajos{
-        justify-content: right;
-        display: flex;
-    }
-
-    .info__container{
-        padding-top: 60px;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 1em;
-        align-items:flex-start;
-    }
-
-    .info__paragraph{
-        line-height: 1.7;
-        margin-bottom: 15px;
-        text-align: left;
-    }
-
-    .info__picture{
-        max-width: 200px;
-    }
-
-    .info__img{
-        width: 100%;
-        display: block;
-    }
-
-    .info__img:hover {
-        transform: translateY(-20px);
-        opacity: 0.7;
-        transition: transform 0.8s, opacity 0.8s;
-        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .titulo__descripcion {
-        width: 100%;
-        position: relative;
-        top: 20%;
-    }
-    
-    .info__trabajo{
-        width: 90%;
-    }
 
 
 /*Contenido del nosotros*/

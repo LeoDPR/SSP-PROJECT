@@ -1,3 +1,59 @@
+ /*Contenido de TRABAJOS*/
+ #main__trabajos{
+    width: 75%;
+    float: left;
+}
+.sidebar {
+    width: 25%;
+    float: left;
+    position: relative;
+    width: 11rem; 
+    height: 400px; 
+    left: 3em; 
+    top: 2em; 
+  }
+
+  .aside__list{
+    margin-left: auto;
+    padding: 0;
+    }
+  
+  .sidebar__item{
+    line-height: 2em;
+    list-style: none;
+    padding: 10px; 
+    border-bottom: 1px solid #ccc; 
+  }
+  
+  .aside__links{
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+    position: relative;
+}
+
+.aside__links::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.aside__links:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+/*-----CARDS-----*/
+
 #Investigaciones {
     height: 100%;
     width: 100%;

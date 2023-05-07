@@ -1,0 +1,138 @@
+/*Esta pagina debera estar en todos archivos, define los estilos de la barra de navegacion y del footer asi como otros estilos generales*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,700&display=swap');
+
+/*Generales*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+:root{
+    --padding-container: 90px 0;
+    --color-title: #001A49;
+}
+
+/*Utilizables*/
+
+.hidden {
+    display: none;
+}
+
+.hide {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-300px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+
+/*------Barra de navegacion--------*/
+
+.nav{
+    padding-left: 10%;
+    padding-right: 10%;
+   --padding-container: 0; 
+   height: 10vh;
+   display: flex;
+   align-items: center;
+   background-color: #164950;
+}
+
+.nav__title a{
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav__items{
+    list-style: none;
+}
+
+.nav__links{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+}
+
+.nav__links::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav__links:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav__menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img{
+    display: block;
+    width: 30px;
+}
+
+.nav__close{
+    display: var(--show, none);
+}
+
+
+/*--------Pie de pagina--------*/
+.footer {
+    margin: 0 auto; 
+   height: 40vh;
+   display: flex;
+   align-items: center;
+   background-color: #164950;
+   width: 100%;
+}
+
+.footer__table {
+    width: 100em;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-collapse: collapse;
+    color: white;
+}
+
+th, td {
+    padding: 7px;
+    width: 100em;
+}
+
+.social_media {
+    width: 45px;
+    height: 45px;
+}
