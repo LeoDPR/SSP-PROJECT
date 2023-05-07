@@ -52,6 +52,19 @@ a{
     transform: translate(0);
 }
 
+.hidework {
+    opacity: 0;
+    transition: all 5s;
+    filter: blur(5px);
+    transform: translateY(200px);
+}
+
+.showwork {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+}
+
 /*Estilos*/
 
 :root{
@@ -95,6 +108,7 @@ body{
 
 .nav__title{
     font-weight: 300;
+    color: white;
 }
 
 .nav__link{
@@ -219,7 +233,7 @@ th, td {
     margin: 0 auto;
 }
 
-/*Contenido del INICIO*/
+/*//////////////// Contenido del INICIO ///////////////////*/
 .inicio__container{
     width: 100%;
     height: 100vh;
@@ -325,7 +339,7 @@ th, td {
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
     }
 
-    /*Contenido de TRABAJOS*/
+    /*////////// Contenido de TRABAJOS /////////////*/
     #main__trabajos{
         width: 75%;
         float: left;
@@ -422,6 +436,261 @@ th, td {
         width: 90%;
     }
 
+    #Investigaciones {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        margin-left: -1em;
+    }
+    
+    #Libros {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #Articulos {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    /*.modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #111111bd;
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .5s;
+    }*/
+    
+    /*.modal__show {
+        opacity: 1;
+        pointer-events: unset;
+        transition: opacity .5s;
+    }*/
+    
+    /*.modal__container {
+        width: 95%;
+        background-color: #fff;
+        margin: auto;
+        max-width: 700px;
+        max-height: 95%;
+        border-radius: 6px;
+        padding: 0.5em 0.5em;
+        display: grid;
+        gap: 1em;
+        place-items: center;
+        grid-auto-columns: 100%;
+    }*/
+    
+    /*.modal__pdf {
+        width: 680px;
+        max-width: 680px;
+        height: 550px;
+        max-height: 550px;
+    }*/
+    
+    .modal__close {
+        text-decoration: none;
+        color: #fff;
+        background-color: #F26250;
+        padding: 0.5em 3em;
+        border: 1px solid;
+        border-radius: 6px;
+        display: inline-block;
+        font-weight: 200;
+        transition: background-color .3s;
+    }
+    
+    .modal__close:hover {
+        color: #F26250;
+        background-color: #fff;
+    }
+    
+    .cards {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        width: 100%;
+        border-radius: 6px;
+        margin: 25px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+        cursor: default;
+        transition: all 400ms ease;
+        min-width: 100px;
+        max-width: 250px;
+        height: 100%;
+        min-height: 380px;
+        max-height: 600px;
+    }
+    
+    .card:hover {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        transform: translateY(-3%);
+    }
+    
+    .card__img {
+        width: 100%;
+        height: 235px;
+        min-height: 100px;
+        max-height: 300px;
+    }
+    
+    .card__title {
+        padding: 15px;
+        text-align: center;
+        font-weight: 400;
+    }
+    
+    .card__paragraph {
+        text-align: center;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 80%;
+    }
+    
+    .modal__open {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+        margin-top: 10px;
+        color: #2FB4CC;
+        border: 1px solid #2FB4CC;
+        border-radius: 4px;
+        transition: all 400ms ease;
+    }
+    
+    .modal__open:hover {
+        background: #2FB4CC;
+        color: #fff;
+    }
+    
+    /*---------------- Contenido de Documentos --------------------*/
+    
+    #Documentos {
+        width: 100%;
+        height: 100%; 
+        margin: 0 auto;
+    }
+    
+    .doc__summary {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2em;
+    }
+    
+    .doc__description {
+        margin-left: 5em;
+        width: 60%;
+    }
+    
+    .doc__image {
+        width: 21em;
+        height: 23em;
+        margin-left: 2em;
+        border-radius: 15px;
+        box-shadow: 1px 1px 5px 2px gray;
+    }
+    
+    .doc__frame {
+        width: 720px;
+        height: 1080px;
+    }
+    
+    .frame__container {
+        display: grid;
+        place-items: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    
+    .doc__title {
+        text-align: center;
+        margin: 2em;
+    }
+    
+    .separator {
+        text-align: center;
+    }
+    
+    .title__separator {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .title__separator::after, .title__separator::before {
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 3px;
+        background-color: currentColor;
+        text-align: center;
+        top: 0.6em;
+    }
+    
+    .title__separator::before {
+        left: -140px;
+    }
+    
+    .title__separator::after {
+        right: -140px;
+    }
+    
+    .doc__img {
+        width: 100%;
+        height: 20em;
+        margin: 0 auto;
+        background-image: url(https://bibliotecas.uabc.mx/wp-content/uploads/2021/01/untitled-0374-e1652295256463.jpg?id=9612) !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    .articulo__img {
+        width: 100%;
+        height: 20em;
+        margin: 0 auto;
+        background-image: url("../images/varias/Revista.jpg") !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    .inv__img {
+        width: 100%;
+        height: 20em;
+        margin: 0 auto;
+        background-image: url("../images/varias/Cientifico.jpg") !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    .trab__img {
+        width: 100%;
+        height: 20em;
+        margin: 0 auto;
+        background-image: url(https://bibliotecas.uabc.mx/wp-content/uploads/2021/02/untitled-0358-min.jpg?id=10653) !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+
 
 /*Contenido del nosotros*/
 .nosotros__container {
@@ -445,7 +714,6 @@ th, td {
     width: 10em;
     height: 11em;
     margin-top: 2.5em;
-    box-shadow: 2px 2px 5px 1px grey;
     margin-left: 0.5em;
     padding-top: 1em;
     text-align: center;
@@ -506,6 +774,7 @@ th, td {
 .mision__container {
     display: flex;
     margin-top: 2.5em;
+    margin-bottom: 2.5em;
 }
 
 .mision__p {
@@ -541,6 +810,7 @@ th, td {
 .ubicacion {
     margin-bottom: 5em;
     border-radius: 50px;
+    margin-top: 5em;
 }
 
 .ubicacion__titulo {

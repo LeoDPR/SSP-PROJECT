@@ -10,8 +10,8 @@ include('./views/get_data.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/evento.css">
+    <link rel="stylesheet" href="./css/styles2.css">
   </head>
   <body>
     <?php include './views/navbar.php'; ?>

@@ -11,8 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles2.css">
 
   </head>
   <body>
@@ -23,6 +22,9 @@
    <!-- //////////Trabajos////////////// -->
 
    <div id="Trabajos" class="">
+    <div class="trab__img">
+
+    </div>
         <aside class="sidebar">
             <ul class="aside__list">
                 <li class="sidebar__item">
@@ -66,7 +68,7 @@
                 ?>
                 
                     <div class="card__container">
-                        <div class="card">
+                        <div class="card hidework">
                             <figure>
                                 <img src="trabajos/investigaciones/images/Riti.png" class="card__img"/>
                             </figure>
@@ -90,7 +92,7 @@
                     while($libros = mysqli_fetch_assoc($libro)) {
                 ?>
                     <div class="card__container">
-                        <div class="card">
+                        <div class="card hidework">
                             <figure>
                                 <img src="trabajos/libros/images/<?php echo $libros['imagen']; ?>" class="card__img"/>
                             </figure>
@@ -114,7 +116,7 @@
                     while($articulos = mysqli_fetch_assoc($articulo)) {
                 ?>
                     <div class="card__container">
-                        <div class="card">
+                        <div class="card hidework">
                             <figure>
                                 <img src="trabajos/articulos/images/<?php echo $articulos['imagen']; ?>" class="card__img"/>
                             </figure>
@@ -132,8 +134,7 @@
 
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar el footer -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script src="./js/funciones.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/main2.js"></script>
   </body>
 </html>
