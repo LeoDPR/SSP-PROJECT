@@ -11,10 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/styles2.css">
     <link rel="stylesheet" href="./css/navbar_footer.css">
-    <link rel="stylesheet" href="./css/styles.css">
-
   </head>
   <body>
     <?php include './views/navbar.php'; ?>
@@ -25,8 +23,10 @@
     <div id="Nosotros" class="">
         <div class="nosotros__container">
             <aside class="nosotros__nav slideInUp">
+                <h3>¿Quiénes Somos?</h3>
+                <hr class="hr__nav">
                 <a href="#nosotros__menu" class="nosotros__links" onclick="mostrar_ocultar_Subnosotros()">Nosotros</a>
-                <hr class="hr__nav" style="box-shadow: 1px 1px 2px 2px gray; border: 1px solid black">
+                <hr class="hr__nav">
                 <a href="#historia__container" class="nosotros__links" onclick="mostrar_ocultarHistoria()">Historia</a>
                 <hr class="hr__nav">
                 <a href="#universidad__container" class="nosotros__links"
@@ -49,10 +49,11 @@
                                 blandit ac commodo at, malesuada et mauris.</p>
                         </div>
                     </div>
-                    <hr class="separacion">
+                    <div class="separator hide">
+                        <h2 class="title__separator">Misión</h2>
+                    </div>
                     <div class="mision__container hide">
                         <div class="mision__p">
-                            <h2>Misión</h2>
                             <p class="quienes__paragraph">Contribuir a la comprensión y aplicación de Ciencias de la
                                 Complejidad con investigaciones y redes transdisciplinarias que promuevan
                                 el bienestar de la sociedad por medio de la solución de problemas complejos</p>
@@ -62,13 +63,14 @@
                                 alt="Conferencia del cuerpo academico">
                         </div>
                     </div>
-                    <hr class="separacion">
+                    <div class="separator hide">
+                        <h2 class="title__separator">Visión</h2>
+                    </div>
                     <div class="mision__container hide">
                         <div>
                             <img src="./images/varias/Vision.jpg" class="vision__imagen" alt="Explanada con alumnos ">
                         </div>
                         <div class="quienes__p">
-                            <h2>Visión</h2>
                             <p class="vision__paragraph">Ser un centro de investigación transdisciplinario con amplio
                                 reconocimiento a nivel nacional e internacional que aborde los problemas complejos que
                                 impactan a la sociedad,
@@ -76,9 +78,10 @@
                                 transdisciplinario basado en las ciencias de la complejidad.</p>
                         </div>
                     </div>
-                    <hr class="separacion">
                     <div class="ubi__container hide">
-                        <h1 class="ubicacion__titulo">Ubicación</h1>
+                        <div class="separator">
+                            <h2 class="title__separator">Ubicación</h2>
+                        </div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1656.8180002520467!2d-116.9617410394941!3d32.5326583601202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d947c983eecfb7%3A0xafe78c95d676a6ce!2sEdificio%20de%20Posgrado%20FCA!5e0!3m2!1ses!2smx!4v1679282317359!5m2!1ses!2smx"
                             width="900" height="400" style="border:0;" allowfullscreen="" loading="lazy"
@@ -93,9 +96,10 @@
                         tempus est, ac convallis sapien blandit at. In hac habitasse platea dictumst. Donec eros lorem,
                         blandit ac commodo at, malesuada et mauris.</p>
                 </div>
-                <hr class="separacion">
+                <div class="separator hide">
+                    <h1 class="title__separator">Nombre</h1>
+                </div>
                 <div class="nombre__container hide">
-                    <h1>Nombre</h1>
                     <div class="nombres hide">
                         <div class="nombre hide">
                             <h2 style="margin-bottom: 1em;">Viejo</h2>
@@ -115,8 +119,9 @@
                         </div>
                     </div>
                 </div>
-                <hr class="separacion">
-                <h1 style="text-align: center; margin-top: 1em;" class="hide">Logo</h1>
+                <div class="separator hide">
+                    <h1 class="title__separator">Logos</h1>
+                </div>
                 <div class="nombres hide">
                     <div class="nombre">
                         <h2>Viejo</h2>
@@ -167,9 +172,8 @@
 
 
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar el footer -->
-    <script src="./js/funciones.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/main2.js"></script>
 </body>
 
 </html>

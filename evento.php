@@ -12,6 +12,7 @@ include('./views/get_data.php');
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/navbar_footer.css">
     <link rel="stylesheet" href="./css/evento.css">
+    <link rel="stylesheet" href="./css/styles2.css">
   </head>
   <body>
     <?php include './views/navbar.php'; ?>

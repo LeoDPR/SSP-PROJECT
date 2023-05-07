@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/navbar_footer.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles2.css">
 </head>
 
 <body onload="sendRequest('<?php echo $_GET['titulo'] ?>', '<?php echo $_GET['tipo'] ?>')">
@@ -25,6 +25,7 @@
 
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
     <script src="./js/app.js"></script>
+    <script src="./js/main2.js"></script>
 </body>
 
 </html>

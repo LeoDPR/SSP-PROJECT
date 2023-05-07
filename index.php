@@ -14,9 +14,8 @@ include('./config.php');
     <title>Complejidad y gestion de las organizaciones</title>
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/navbar_footer.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles2.css">
     <script src="./js/views.js"></script>
 </head>
 
@@ -98,9 +97,8 @@ include('./config.php');
 
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
 
-    <script src="./js/funciones.js"></script>
-    <script src="./js/main.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/main2.js"></script>
 </body>
 
 </html>
