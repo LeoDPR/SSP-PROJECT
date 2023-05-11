@@ -2,18 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,700&display=swap');
 
 /*Generales*/
-body{
+body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #333;
 }
 
-a{
+a {
     text-decoration: none;
     color: #000000;
 }
-:root{
-    --padding-container: 90px 0;
-    --color-title: #001A49;
-}
+
 
 /*Utilizables*/
 
@@ -37,23 +39,23 @@ a{
 
 /*------Barra de navegacion--------*/
 
-.nav{
+.nav {
     padding-left: 10%;
     padding-right: 10%;
-   --padding-container: 0; 
-   height: 10vh;
-   display: flex;
-   align-items: center;
-   background-color: #164950;
+    --padding-container: 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: #164950;
 }
 
-.nav__title a{
+.nav__title a {
     font-weight: 300;
     color: #fff;
     text-decoration: none;
 }
 
-.nav__link{
+.nav__link {
     margin-left: auto;
     padding: 0;
     display: grid;
@@ -62,18 +64,18 @@ a{
     gap: 2em;
 }
 
-.nav__items{
+.nav__items {
     list-style: none;
 }
 
-.nav__links{
+.nav__links {
     text-decoration: none;
     color: #fff;
     display: inline-block;
     position: relative;
 }
 
-.nav__links::after{
+.nav__links::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -86,35 +88,35 @@ a{
     transition: transform 0.25s ease-out;
 }
 
-.nav__links:hover::after{
+.nav__links:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-.nav__menu{
+.nav__menu {
     margin-left: auto;
     cursor: pointer;
     display: none;
 }
 
-.nav__img{
+.nav__img {
     display: block;
     width: 30px;
 }
 
-.nav__close{
+.nav__close {
     display: var(--show, none);
 }
 
 
 /*--------Pie de pagina--------*/
 .footer {
-    margin: 0 auto; 
-   height: 40vh;
-   display: flex;
-   align-items: center;
-   background-color: #164950;
-   width: 100%;
+    margin: 0 auto;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    background-color: #164950;
+    width: 100%;
 }
 
 .footer__table {
@@ -127,7 +129,8 @@ a{
     color: white;
 }
 
-th, td {
+th,
+td {
     padding: 7px;
     width: 100em;
 }

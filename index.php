@@ -16,7 +16,7 @@ include('./config.php');
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/navbar_footer.css">
     <link rel="stylesheet" href="./css/styles2.css">
-    <script src="./js/views.js"></script>
+    <!--<script src="./js/views.js"></script>-->
 </head>
 
 <body>
@@ -36,9 +36,34 @@ include('./config.php');
         <main>
             <section class="news  container">
                 <div class="news__container">
-                    <h2 cvcd lass="subtitle2">Noticias/Eventos</h2>
+                    <h2 class="subtitle2">Noticias/Eventos</h2>
                     <div class="articles__news" id="articles-news">
 
+                    <?php
+            $select = mysqli_query($conn, "SELECT * FROM eventos ORDER BY id_evento DESC LIMIT 3");
+
+            while ($row = mysqli_fetch_assoc($select)) {
+                ?>
+                
+                    <div class="new__card">
+                        <figure>
+                        <a href="evento.php?page_view=<?php echo $row['id_evento']; ?>">
+                            <img src="./images/eventos/<?php echo $row['imagen_evento']; ?>" class="news__image" />
+                        </a>
+                        </figure>
+                        <div class="new__paragraph">
+                        <a href="evento.php?page_view=<?php echo $row['id_evento']; ?>">
+                            <h4 class="subtitle3">
+                                <?php echo $row['nombre']; ?>
+                            </h4>
+                        </a>
+                            <p class="subtitle3"><?php echo $row['descripcion']; ?></p>
+                        </div>
+                    </div>
+                
+            <?php }
+            ;
+            ?>             
                     </div>
                 </div>
             </section>

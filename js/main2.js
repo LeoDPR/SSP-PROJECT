@@ -52,7 +52,7 @@ function mostrar_ocultarNosotros() {
     document.getElementById('Nosotros').classList.remove("hidden");
 }
 
-/*--------------------- Funciones para mostrar y ocultar las secciones de Nosotros ---------------------*/ 
+/*--------------------- Funciones para mostrar y ocultar las secciones de Nosotros ---------------------*/
 
 function mostrar_ocultar_Subnosotros() {
     document.getElementById('Nosotros2').classList.remove("hidden");
@@ -72,7 +72,7 @@ function mostrar_ocultarUniversidad() {
     document.getElementById('Universidad').classList.remove("hidden");
 }
 
-/*--------------------- Funciones para mostrar y ocultar las secciones de Trabajos ---------------------*/ 
+/*--------------------- Funciones para mostrar y ocultar las secciones de Trabajos ---------------------*/
 
 function mostrar_ocultarInvestigaciones() {
     document.getElementById('Investigaciones').classList.remove("hidden");
@@ -96,16 +96,27 @@ function mostrar_ocultarDocumentos() {
     document.getElementById('Documentos').classList.remove("hidden");
     document.getElementById('Trabajos').classList.add("hidden");
 }
+/*------------Funcion para abrir modal de los miembros-------------*/
+
+function openModal(id) {
+    const modal_container = document.getElementById("modal"+id);
+        modal_container.classList.add('showModal');
+}
+
+function closeModal(id){
+    const modal_container = document.getElementById("modal"+id);
+    modal_container.classList.remove('showModal');
+}
 
 
-/*--------------------- Función que hace efecto de animación de scroll en la sección de Nosotros ---------------------*/ 
+/*--------------------- Función que hace efecto de animación de scroll en la sección de Nosotros ---------------------*/
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
-        }else {
+        } else {
             entry.target.classList.remove('show');
         }
     });
@@ -114,7 +125,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hide');
 hiddenElements.forEach((el) => observer.observe(el));
 
-/*--------------------- Función que hace efecto de animación de scroll en la sección de Trabajos ---------------------*/ 
+/*--------------------- Función que hace efecto de animación de scroll en la sección de Trabajos ---------------------*/
 
 const observador = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

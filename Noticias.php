@@ -6,24 +6,22 @@ include('./config.php');
 <html>
 
 <head>
-    <title>Trabajos</title>
+    <title>Noticias</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/navbar_footer.css">
-    <link rel="stylesheet" href="./css/evento.css">
+    <link rel="stylesheet" href="./css/styles2.css">
 
 </head>
 
-<body>
+<body id="body__noticias">
     <?php include './views/navbar.php'; ?>
-
-
+    <h1 class="titulo">Eventos</h1>
     <!--  /////////////////////   Mostrar eventos existentes /////////////////   -->
     <div id="eventos">
-        <h1>Eventos</h1>
         <div class="cards">
             <?php
             $select = mysqli_query($conn, "SELECT * FROM eventos ORDER BY id_evento DESC");
@@ -53,7 +51,7 @@ include('./config.php');
             ?>
         </div>
     </div>
-   
+
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar el footer -->
 
 </body>
