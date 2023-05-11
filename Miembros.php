@@ -37,7 +37,7 @@ include('./config.php');
                             <h3 class="card__miembro__title">
                                 <?php echo $row['nombre'] . " " . $row['apellido']; ?>
                             </h3>
-                            <button onclick="openModal(<?php echo $row['id_autor']; ?>)">
+                            <button class="button_modal" onclick="openModal(<?php echo $row['id_autor']; ?>)">
                                 Mas informacion
                             </button>
                         </div>
@@ -55,7 +55,7 @@ include('./config.php');
                     <p>
                         <?php echo $row['descripcion']; ?>
                     </p>
-                    <button id="close<?php echo $row['id_autor']; ?>" onclick="closeModal(<?php echo $row['id_autor']; ?>)">Cerrar</button>
+                    <button class="button_modal" id="close<?php echo $row['id_autor']; ?>" onclick="closeModal(<?php echo $row['id_autor']; ?>)">Cerrar</button>
                 </div>
             </div>
 

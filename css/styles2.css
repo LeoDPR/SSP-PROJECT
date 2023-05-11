@@ -85,7 +85,7 @@
 }
 
 
-/*----------------- CONTENIDO -----------------------*/
+/*----------------- CONTENIDO -----------------------
 #Noticias {
     width: 100%;
     height: 100%;
@@ -1110,9 +1110,9 @@ button {
 }
 
 
-/*Modal de la pagina de miembros*/
+/*Modal de la pagina de miembros
 
-button {
+#button_modal {
     width: 120px;
     background-color: #47a386;
     border: 0;
@@ -1123,10 +1123,10 @@ button {
     padding: 10px 25px;
 }
 
-button:hover {
+#button_modal:hover {
     cursor: pointer;
 }
-
+*/
 .modal-container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
