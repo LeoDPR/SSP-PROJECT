@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,700&display=swap');
 
-/*Animations*/
+/*------------------- Animations -----------------*/
+
 @keyframes slideInLeft {
     from {
         transform: translateX(-100px);
@@ -29,8 +30,7 @@
     animation: slideInLeft 1s ease-in;
 }
 
-
-/*Estilos index*/
+/*---------------- Estilos index -----------------------*/
 
 .hide {
     opacity: 0;
@@ -59,7 +59,7 @@
     transform: translate(0);
 }
 
-/*Estilos*/
+/*------------------ Estilos -----------------*/
 
 :root{
     --padding-container: 90px 0;
@@ -89,7 +89,7 @@ body{
 }
 
 
-/*CONTENIDO*/
+/*----------------- CONTENIDO -----------------------*/
 #Noticias {
     width: 100%;
     height: 100%;
@@ -106,12 +106,10 @@ body{
     position: relative;
 }
 
-
 #Contacto {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    background-color: blue;
     position: relative;
 }
 
@@ -578,7 +576,7 @@ body{
     
 
 
-/*Contenido del nosotros*/
+/* ------------------------------ Contenido del nosotros ------------------------ */
 .nosotros__container {
     margin: 0 auto;
     height: 100%; 
@@ -767,4 +765,144 @@ body{
 .p__rector {
     margin-top: 4em;
     width: 35em;
+}
+
+/* ------------------------------ Contenido de sección de Contacto ------------------------ */
+
+#Contacto {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.contacto__img {
+    width: 100%;
+    height: 30em;
+    margin: 0 auto;
+    background-image: url("../images/varias/Contacto.jpg") !important;
+    background-size: cover;
+}
+
+form {
+    padding: 40px 0;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+input {
+    background: none;
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+textarea {
+    background: none;
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+    color: #5e5d5d;
+}
+
+textarea:focus {
+    outline: none;
+    color: #5e5d5d;
+}
+
+label {
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label, input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #80FA14;
+}
+
+textarea:focus~label, textarea:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #80FA14;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: #80FA14;
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+textarea:focus~.barra::before {
+    width: 100%;
+}
+
+button {
+    background-color: #3D4536;
+    color: #ffff;
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contacto__title {
+    margin: 2em auto;
+    text-align: center;
+}
+
+#Form {
+    display: inline-block;
+}
+
+.media {
+    display: inline-block;
+    width: 40%;
+    height: 40em;
+    background-image: url("../images/varias/Redes Sociales 3.jpg") !important;
+    background-size: cover;
+    margin-left: 13em;
 }
