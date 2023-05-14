@@ -22,7 +22,7 @@
 
     <div id="Nosotros" class="">
         <div class="nosotros__container">
-            <aside class="nosotros__nav slideInUp">
+            <aside class="nosotros__nav">
                 <h3>¿Quiénes Somos?</h3>
                 <hr class="hr__nav">
                 <a href="#nosotros__menu" class="nosotros__links" onclick="mostrar_ocultar_Subnosotros()">Nosotros</a>

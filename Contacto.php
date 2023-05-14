@@ -28,33 +28,44 @@
                 <h2>¿Tienes alguna duda o comentario? Llena el formulario y nos pondremos en contacto contigo</h2>
             </div>
             <br />
-            <!-- https://formsubmit.co/adan.escamilla@uabc.edu.mx -->
-            <form action="https://formsubmit.co/adan.escamilla@uabc.edu.mx " method="POST" id="Form">
-                <div class="form">
-                    <div class="grupo">
-                        <input type="text" name="nombre"  required /><span class="barra"></span>
-                        <label for="">Nombre</label>
+            <div class="contacto__container">
+                <!-- https://formsubmit.co/adan.escamilla@uabc.edu.mx -->
+                <form action="mail.php" method="POST" id="Form">
+                    <div class="form">
+                        <div class="grupo">
+                            <input type="text" name="nombre"  required /><span class="barra"></span>
+                            <label for="">Nombre</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="tel" name="telefono"  required /><span class="barra"></span>
+                            <label for="">Teléfono</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="email" name="email"  required /><span class="barra"></span>
+                            <label for="">Correo Electrónico</label>
+                        </div>
+                        <div class="grupo">
+                            <input type="text" name="asunto"  required /><span class="barra"></span>
+                            <label for="">Asunto</label>
+                        </div>
+                        <div class="grupo">
+                            <textarea name="comentarios" rows="8" cols="40"></textarea>
+                            <label for="">¿Cómo podemos ayudarte?</label>
+                        </div>
+                        <button type="submit" onclick="return confirmacion()" name="enviar" >Enviar</button>
                     </div>
-                    <div class="grupo">
-                        <input type="tel" name="telefono"  required /><span class="barra"></span>
-                        <label for="">Teléfono</label>
+                </form>
+                <div class="media__container">
+                    <div class="media">
+                        <div class="media__title">
+                            <h4>Siguenos en nuestras Redes Sociales para mas noticias y actualizaciones</h4>
+                        </div>
+                        <div class="social__media_contacto">
+                            <a href="https://www.facebook.com/centrodeestudiosdelacomplejidadfca"><img src="./images/logos/facebook.png" class="social"></a>
+                        </div>
                     </div>
-                    <div class="grupo">
-                        <input type="email" name="email"  required /><span class="barra"></span>
-                        <label for="">Correo Electrónico</label>
-                    </div>
-                    <div class="grupo">
-                        <input type="text" name="asunto"  required /><span class="barra"></span>
-                        <label for="">Asunto</label>
-                    </div>
-                    <div class="grupo">
-                        <textarea name="comentarios" rows="8" cols="40"></textarea>
-                        <label for="">¿Cómo podemos ayudarte?</label>
-                    </div>
-                    <button type="submit" onclick="return confirmacion()" name="enviar" >Enviar</button>
                 </div>
-            </form>
-            <div class="media"></div>
+            </div>
         </div>
     
         <?php include './views/footer.php'; ?> <!-- Sirve para mostrar el footer -->

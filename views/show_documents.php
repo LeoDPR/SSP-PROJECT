@@ -108,7 +108,7 @@ if (isset($_POST['investigacion'])) {
                             <br />
                             <p><strong>Peridio de Fin:</strong> <?php echo $investigaciones['periodo_fin']; ?></p>
                             <br />
-                            <p><strong>Año de Inicio:</strong> <?php echo $investigaciones['anio_inicio']; ?> Año de Fin: <?php echo $investigaciones['anio_fin']; ?></p>
+                            <p><strong>Año de Inicio:</strong> <?php echo $investigaciones['anio_inicio']; ?> <strong>Año de Fin:</strong> <?php echo $investigaciones['anio_fin']; ?></p>
                         </div>
                     </div>
                     <div class="separator">
