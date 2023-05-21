@@ -80,8 +80,8 @@
                                 </tr>
                                 <tr class="tr">
                                     <td class="td">8</td>
-                                    <td class="td"><img src="./images/vinculacion/Congreso.png" class="ca__img" alt="Icono del CA" />Comisión de la Salud, Congreso del Estado de Baja California</td>
-                                    <td class="td"><a href="./trabajos/vinculacion/Congreso del Estado.pdf" target="_blank" class="download">Download</a></td>
+                                    <td class="td"><img src="./images/vinculacion/Playas.jpeg" class="ca__img" alt="Icono del CA" />Colegio Playas Elementary & Junior High School</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Playas.pdf" target="_blank" class="download">Download</a></td>
                                 </tr>
                                 <tr class="tr">
                                     <td class="td">9</td>
@@ -112,6 +112,111 @@
                                     <td class="td">14</td>
                                     <td class="td"><img src="./images/Logos/escudo-actualizado-2022.png" class="ca__img" alt="Icono del CA" />Tecnologías de la Información y Comunicación en la Educación (UABC)</td>
                                     <td class="td"><a href="./trabajos/vinculacion/TIC'S.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">15</td>
+                                    <td class="td"><img src="./images/Logos/escudo-actualizado-2022.png" class="ca__img" alt="Icono del CA" />Gestión de la Innovación Tecnológica en las organizaciones (UABC)</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Gestión Tec.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">16</td>
+                                    <td class="td"><img src="./images/Logos/escudo-actualizado-2022.png" class="ca__img" alt="Icono del CA" />Administración del área tecnológica de las organizaciones (UABC)</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Administración.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">17</td>
+                                    <td class="td"><img src="./images/Logos/escudo-actualizado-2022.png" class="ca__img" alt="Icono del CA" />Consejo de la Vinculación de la FCA (UABC)</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Consejo de Vinculación.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </main>
+                <br />
+                <br />
+                <main class="table__container">
+                    <section class="table__header">
+                        <h2>Sector Privado</h2>
+                    </section>
+                    <section class="table__body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="th">Número</th>
+                                    <th class="th">Empresa</th>
+                                    <th class="th">Convenio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr">
+                                    <td class="td">1</td>
+                                    <td class="td"><img src="./images/vinculacion/Congreso.png" class="ca__img" alt="Icono del la Empresa" />Comisión de la Salud, Congreso del Estado de Baja California</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Congreso del Estado.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">2</td>
+                                    <td class="td"><img src="./images/vinculacion/Brigada.jpg" class="ca__img" alt="Icono del la Empresa" />Educación para el Bienestar - Acuerdo Nacional para la Educación</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Brigada.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">3</td>
+                                    <td class="td"><img src="./images/vinculacion/Arkus.png" class="ca__img" alt="Icono del la Empresa" />ArkusNexus</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Arkus.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">4</td>
+                                    <td class="td"><img src="./images/vinculacion/Sistemax.png" class="ca__img" alt="Icono del la Empresa" />Sistemax, SA de CV</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Sistemax.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">5</td>
+                                    <td class="td"><img src="./images/Logos/escudo-actualizado-2022.png" class="ca__img" alt="Icono del la Empresa" />Desarrollo Web CineCamino</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/CineCamino.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </main>
+                <br />
+                <br />
+                <main class="table__container">
+                    <section class="table__header">
+                        <h2>Actividades de Vinculación</h2>
+                    </section>
+                    <section class="table__body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="th">Número</th>
+                                    <th class="th">Actividad</th>
+                                    <th class="th">Convenio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr">
+                                    <td class="td">1</td>
+                                    <td class="td">Adultos en Plenitud Aprendiendo Nuevas Tecnologías</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Adultos.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">2</td>
+                                    <td class="td">Taller Finazas para Jovenes</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Finanzas.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">3</td>
+                                    <td class="td">Simulador Social para la Predicción y Prevención de Adicciones</td>
+                                    <td class="td"></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">4</td>
+                                    <td class="td">Proyecto Desarrollo e Implementación de un Repositorio de Información</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Repositorio.pdf" target="_blank" class="download">Download</a></td>
+                                </tr>
+                                <tr class="tr">
+                                    <td class="td">5</td>
+                                    <td class="td"><img src="./images/Logos/escudo-actualizado-2022.png" class="ca__img" alt="Icono de la Actividad" />Expo Profesiones</td>
+                                    <td class="td"><a href="./trabajos/vinculacion/Expo Profesiones.pdf" target="_blank" class="download">Download</a></td>
                                 </tr>
                             </tbody>
                         </table>

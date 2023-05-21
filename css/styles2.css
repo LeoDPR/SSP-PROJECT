@@ -1294,6 +1294,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     margin-bottom: 2em;
+    flex-direction: column;
 }
 
 .ca__img {
