@@ -40,8 +40,8 @@ a {
 /*------Barra de navegacion--------*/
 
 .nav {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     --padding-container: 0;
     height: 10vh;
     display: flex;
@@ -112,7 +112,7 @@ a {
 /*--------Pie de pagina--------*/
 .footer {
     margin: 0 auto;
-    height: 40vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     background-color: #164950;
@@ -121,7 +121,7 @@ a {
 
 .footer__table {
     width: 100em;
-    height: 30vh;
+    height: 35vh;
     display: flex;
     align-items: center;
     text-align: center;

@@ -21,5 +21,9 @@
                 </li>
                 <li class="nav__items">
                     <a href="Nosotros.php" class="nav__links">Nosotros</a>
+                </li>
+                <li class="nav__items">
+                    <a href="Vinculacion.php" class="nav__links">Vinculación</a>
+                </li>
             </ul>
         </nav>
