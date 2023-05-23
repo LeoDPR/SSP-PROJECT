@@ -15,4 +15,6 @@ WHERE eventos.id_evento = $id";
 $query = mysqli_query($conn, $sql);
 $result = mysqli_fetch_array($query)
 
-?>
+    ?>
+
+
