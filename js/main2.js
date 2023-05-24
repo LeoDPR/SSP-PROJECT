@@ -1,4 +1,4 @@
-function mostrar_ocultarInicio() {
+/*function mostrar_ocultarInicio() {
     document.getElementById('Inicio').classList.remove("hidden");
     document.getElementById('Noticias').classList.add("hidden");
     document.getElementById('Miembros').classList.add("hidden");
@@ -50,7 +50,7 @@ function mostrar_ocultarNosotros() {
     document.getElementById('Trabajos').classList.add("hidden");
     document.getElementById('Contacto').classList.add("hidden");
     document.getElementById('Nosotros').classList.remove("hidden");
-}
+}*/
 
 /*--------------------- Funciones para mostrar y ocultar las secciones de Nosotros ---------------------*/
 

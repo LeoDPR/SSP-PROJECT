@@ -34,6 +34,12 @@ include('./views/get_data.php');
 	</main>
 
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
-
+    <script src="./js/main2.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguage: 'en, es'}, 'google_translate_element');
+        }
+      </script>
   </body>
 </html>

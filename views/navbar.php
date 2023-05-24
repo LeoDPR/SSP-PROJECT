@@ -25,5 +25,8 @@
                 <li class="nav__items">
                     <a href="Vinculacion.php" class="nav__links">Vinculación</a>
                 </li>
+                <div id="google_translate_element"></div>
             </ul>
         </nav>
+        <!-- <script src="./js/main2.js"></script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
