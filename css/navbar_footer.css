@@ -113,6 +113,11 @@ a {
     display: inline-block;
 }
 
+dl, ol, ul {
+    margin-top: 1 !important;
+    margin-bottom: 0rem !important;
+}
+
 /*--------Pie de pagina--------*/
 .footer {
     margin: 0 auto;
