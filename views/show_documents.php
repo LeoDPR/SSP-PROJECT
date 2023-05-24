@@ -180,7 +180,7 @@ if (isset($_POST['investigacion'])) {
                         </h2>
                     </div>
                     <div class="doc__summary">
-                        <img src="./trabajos/investigaciones/images/Riti.png" class="doc__image" />
+                        <img src="./trabajos/investigaciones/images/researchDefault.png" class="doc__image" />
                         <div class="doc__description">
                             <p>
                                 <?php echo $investigaciones['descripcion']; ?>

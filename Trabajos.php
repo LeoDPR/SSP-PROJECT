@@ -50,7 +50,7 @@
                     <div class="card__container">
                         <div class="card hidework">
                             <figure>
-                                <img src="trabajos/investigaciones/images/Riti.png" class="card__img"/>
+                                <img src="trabajos/investigaciones/images/researchDefault.png" class="card__img"/>
                             </figure>
                             <div class="card__paragraph">
                                 <h4 class="card__title"><?php echo $row['titulo']; ?></h4>
