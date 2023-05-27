@@ -23,7 +23,7 @@ include('./views/get_data.php');
         </div>
 				<div class="informacion__evento">
 					<h1><?php echo $result['nombre'] ?></h1>
-          <h4>Autor: </h4><p> <?php echo $result['nombre_autor'] ?>.</p> 
+          <h4>Organizador: </h4><p> <?php echo $result['nombre_autor'] ?>.</p> 
           <h4>Fecha de inicio: </h4><p><?php echo $result['fecha_inicio'] ?></p>
           <h4>Fecha final: </h4><p><?php echo $result['fecha_final'] ?></p>
           <h4>Lugar: </h4><p><?php echo $result['lugar'] ?>.</p>

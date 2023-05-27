@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-05-2023 a las 21:46:33
+-- Tiempo de generación: 27-05-2023 a las 06:26:07
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -235,7 +235,24 @@ INSERT INTO `autores` (`id_autor`, `nombre`, `apellido`, `descripcion`, `imagen_
 (39, 'Samantha', 'Jiménez', '', 'defaultprofile.png', 0),
 (40, 'Sergio Octavio ', 'Vázquez', '', 'defaultprofile.png', 0),
 (41, 'Carlos', 'Hurtado', '', 'defaultprofile.png', 0),
-(42, 'Reyes', 'Juárez Ramírez', '', 'defaultprofile.png', 0);
+(42, 'Reyes', 'Juárez Ramírez', '', 'defaultprofile.png', 0),
+(43, 'Cipriano Domingo', 'Coronado Garcia', '', 'defaultprofile.png', 0),
+(44, 'Virginia Guadalupe', 'Lopes Torres', '', 'defaultprofile.png', 0),
+(45, 'Sandra Julieta', 'Saldivar Gonzales', '', 'defaultprofile.png', 0),
+(46, 'Luis Ramon', 'Moreno Moreno', '', 'defaultprofile.png', 0),
+(47, 'Eduardo', 'Ahumada Tello', '', 'defaultprofile.png', 0),
+(48, 'Jorge Ines', 'Morales Garfias', '', 'defaultprofile.png', 0),
+(49, 'Robert Efrain', 'Zarate Cornejo', '', 'defaultprofile.png', 0),
+(50, 'Carlos Alberto', 'Flores Sanchez', '', 'defaultprofile.png', 0),
+(51, 'Martha Ofelia', 'Lobo Rodriguez', '', 'defaultprofile.png', 0),
+(52, 'Isaac', 'Cruz Estrada', '', 'defaultprofile.png', 0),
+(53, 'Ma Enselmina', 'Marin Vargas', '', 'defaultprofile.png', 0),
+(54, 'Ma. del Carmen', 'Alcala Alvarez', '', 'defaultprofile.png', 0),
+(55, 'Veronica Guadalupe ', 'De la O Burrola', '', 'defaultprofile.png', 0),
+(56, 'Clementina E.', 'Garcia Martinez', '', 'defaultprofile.png', 0),
+(57, 'Jose de Jesus', 'Moreno Neri', '', 'defaultprofile.png', 0),
+(58, 'Lizzette', 'Velasco Aulcy', '', 'defaultprofile.png', 0),
+(59, 'Nancy Imelda', 'Montero Delgado', '', 'defaultprofile.png', 0);
 
 -- --------------------------------------------------------
 
@@ -258,10 +275,15 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`id_evento`, `nombre`, `fecha_inicio`, `fecha_final`, `lugar`, `descripcion`, `imagen_evento`) VALUES
-(5, '5to Coloquio Estatal del programa MGTIC', '2020-05-27', '2020-05-28', 'Videoconferencia', 'La maestría en gestión de Tecnologías de la información y la Comunicación (MGTIC) presentan un espacio para el conocimiento y difusión de los Proyectos Terminales de los estudiantes del programa. La MGTIC los invita a las exposiciones y a la...', '5to Coloquio Estatal del programa MGTIC..jpg'),
-(6, 'Evento para aprender a mostrar datos.', '2020-05-28', '2020-05-30', 'Facultad de Contaduria y Administracion', 'Aquí se debería de mostrar una descripción del evento para darle mas información al usuario.', 'Evento para aprender a mostrar datos..jpg'),
-(7, 'Tercer evento para mejorar en la muestra de eventos.', '2021-06-15', '2021-05-16', 'Videoconferencia', 'Descripción del tercer evento para mostrar en la pagina.', 'Tercer evento para mejorar en la muestra de eventos..jpg'),
-(8, '4to Evento para validar.', '2023-02-28', '2023-03-10', 'Facultad de Contaduria y Administracion', 'Esta es la cuarta descripción de los eventos que se van a mostrar en la pagina.', '4to Evento para validar..jpg');
+(11, '1er. Coloquio Internacional de Investigación aplicada a la mercadotecnia', '2017-11-27', '2017-12-01', 'FCA', 'Análisis de la implementación de estrategias de marketing en la MiPyMes de Baja California.', '1er. Coloquio Internacional de Investigación aplicada a la mercadotecnia.jpg'),
+(12, 'VI Foro de Actualización Profesional', '2017-09-27', '2017-09-29', 'FCA', 'VI Foro de Actualización  Profesional, dirigido a los futuros profesionistas de esta facultad.', 'VI Foro de Actualización Profesional.jpg'),
+(16, '1er. Congreso Internacional de Investigación aplicada a la mercadotecnia', '2018-11-28', '2018-11-30', 'FCA y Videoconferencia', 'Colaboración en la organización de las actividades.', '1er. Congreso Internacional de Investigación aplicada a la mercadotecnia.jpg'),
+(17, '1er Jornada Internacional de Investigación', '2018-04-30', '2018-05-04', 'FCA', '1er Jornada Internacional de Investigación 2018, dirigido a estudiantes  de licenciatura de la FCA.', '1er Jornada Internacional de Investigación.jpg'),
+(18, 'Semana Nacional de Actualización Docente', '2018-08-20', '2018-08-24', 'FCA', 'Semana Nacional de Actualización Docente 2018, en el área de Telecomunicaciones y Conectividad, dirigido a los docentes de las IES afiliadas a ANFECA', 'Semana Nacional de Actualización Docente.jpg'),
+(19, 'XXXIII Semana de la Contaduría Pública', '2018-09-17', '2018-09-21', 'Tijuana, BC', '', 'XXXIII Semana de la Contaduría Pública.jpg'),
+(20, 'VIII Foro Internacional de Actualización Profesional', '2019-09-25', '2019-09-29', 'FCA', 'VIII Foro Internacional de Actualización Profesional, dirigido a los futuros profesionistas de esta Facultad.', 'VIII Foro Internacional de Actualización Profesional.jpg'),
+(21, 'Maraton Regional de Conocimiento ANFECA 2019', '2019-04-11', '2019-04-12', 'FCA', 'Maratón Regional Zona I Noroeste: Fiscal, Finanzas, Administración, Informática Administrativa, Mercadotecnia y Negocios Internacionales', 'Maraton Regional de Conocimiento ANFECA 2019.jpg'),
+(22, 'Quinto Coloquio Estatal', '2020-05-27', '2020-05-28', 'Videoconferencia', 'La maestría de Gestión de Tecnologías de la información y comunicación presenta un espacio para el conocimiento y difusión de los Proyectos Terminales de los estudiantes del programa.', 'Quinto Coloqui Estatal.jpg');
 
 -- --------------------------------------------------------
 
@@ -280,14 +302,23 @@ CREATE TABLE `eventos_autores` (
 --
 
 INSERT INTO `eventos_autores` (`id_eventos_autores`, `id_autor`, `id_evento`) VALUES
-(9, 1, 5),
-(10, 2, 5),
-(11, 10, 6),
-(12, 1, 6),
-(13, 3, 6),
-(14, 3, 7),
-(15, 2, 7),
-(16, 3, 8);
+(19, 2, 11),
+(20, 2, 12),
+(24, 1, 11),
+(25, 2, 16),
+(26, 1, 16),
+(27, 2, 17),
+(28, 1, 17),
+(29, 1, 18),
+(30, 2, 18),
+(31, 2, 19),
+(32, 1, 12),
+(33, 1, 20),
+(34, 2, 20),
+(35, 1, 21),
+(36, 2, 21),
+(37, 1, 22),
+(38, 2, 22);
 
 -- --------------------------------------------------------
 
@@ -298,7 +329,7 @@ INSERT INTO `eventos_autores` (`id_eventos_autores`, `id_autor`, `id_evento`) VA
 CREATE TABLE `investigaciones` (
   `id_investigacion` int(11) NOT NULL,
   `clave` int(11) DEFAULT NULL,
-  `titulo` varchar(200) DEFAULT NULL,
+  `titulo` varchar(250) DEFAULT NULL,
   `periodo_inicio` int(11) NOT NULL,
   `anio_inicio` year(4) NOT NULL,
   `periodo_fin` int(11) NOT NULL,
@@ -312,8 +343,21 @@ CREATE TABLE `investigaciones` (
 --
 
 INSERT INTO `investigaciones` (`id_investigacion`, `clave`, `titulo`, `periodo_inicio`, `anio_inicio`, `periodo_fin`, `anio_fin`, `descripcion`, `url_descarga`) VALUES
-(5, 0, 'SIMULADOR DE PROCESOS DE GESTIÓN DE LA INNOVACIÓN COMO BASE DE CONOCIM', 2, '2016', 2, '2016', 'El presente tiene como propósito contar con una guía clara y específica que garantice la óptima operación y desarrollo de las diferentes actividades del Simulador de procesos de gestión de la innovación como base de conocimiento para la educación e investigación l Es importante señalar, que este documento está sujeto a actualización en la medida que se vayan realizando distintas versiones del software.', ''),
-(9, 301, 'ESTUDIO DE LOS SISTEMAS DE INFORMACIÓN APLICADOS A REDES SOCIALES EN TIJUANA', 1, '2020', 2, '2021', 'Este Proyecto de se realizara un estudio de los sistemas de información aplicados a las redes sociales con enfoque de negocios en el año 2020 nos permite identificar que redes son las más populares en esta ciudad tales como Facebook, Twitter , Pinterest y otras más.', 'ESTUDIOS SI SOCIAL 20-21.pdf');
+(13, 0, 'ANÁLISIS DE LAS CAPACIDADES TECNOLÓGICAS DE LAS MICRO Y PEQUEÑAS EMPRESAS  QUE PERMITAN LA ADOPCIÓN E IMPLEMENTACIÓN ADECUADA DE UN SISTEMA DE INFORMACIÓN  AUTOMATIZADO: SECTOR SERVICIOS EN BAJA CALIFORNIA', 2, '2019', 1, '2021', '', 'analisis de las capacidades.pdf'),
+(14, 301, 'EL APRENDIZAJE ORGANIZACIONAL Y LA ADMINISTRACIÓN DE LA FUNCIÓN INFORMATICA EN LA EMPRESA', 1, '2019', 2, '2019', '', 'Aprendizaje Organizacional-AFI.pdf'),
+(15, 300, 'CITY SANDBOX 1.0: SISTEMA EN LINEA DE PARTICIPACIÓN CIUDADANA PARA LA PLANEACIÓN DEMOCRÁTICA DE LAS CIUDADES', 2, '2019', 1, '2021', '', 'City SandBox.PDF'),
+(16, 301, 'ESTRATEGIAS TECNOLÓGICAS EN EL USO DE LOS SISTEMAS DE INFORMACIÓN', 1, '2019', 2, '2020', '', 'Estrategias Tecnologicas.pdf'),
+(17, 301, 'ANÁLISIS DE OPORTUNIDADES Y MEJORAS DE LAS COMPETENCIAS DE APRENDIZAJE A NIVEL  LICENCIATURA, DESDE LA PERSPECTIVA DE SISTEMAS COMPLEJOS', 1, '2019', 2, '2020', '', 'simulador Competencias LI.pdf'),
+(18, 301, 'SIMULADOR DE PROCESOS DE GESTIÓN DE LA COMPETITIVIDAD DE UN DOCENTE UNIVERSITARIO COMO BASE DE CONOCIMIENTO PARA LA EDUCACIÓN UNIVERSITARIA DE CALIDAD', 1, '2019', 2, '2020', '', 'Simulador Competitividad.pdf'),
+(19, 0, 'SIMULADOR DE PROCESOS DE GESTIÓN DE LA INNOVACIÓN COMO BASE DE CONOCIMIENTO PARA LA  EDUCACIÓN E INVESTIGACIÓN', 2, '2016', 2, '2017', '', 'Simulador Educacion e Investigacion N.pdf'),
+(20, 301, 'SIMULADOR SOCIAL PARA IDENTIFICACIÓN DE CARACTERÍSTICAS Y TIPOS DE PERSONALIDAD Y SU RELACIÓN EN EL PROCESO DE MOTIVACIÓN', 1, '2019', 2, '2020', '', 'Simulador Personalidad.pdf'),
+(21, 0, 'SIMULADOR SOCIAL PARA PREDICCIÓN Y PREVENCIÓN DE ADICCIONES', 2, '2018', 1, '2020', '', 'Simulador Prediccion N.pdf'),
+(22, 301, 'ESTUDIO DE LOS SISTEMAS DE INFORMACIÓN APLICADOS A REDES SOCIALES EN TIJUANA', 1, '2020', 2, '2021', '', 'ESTUDIOS SI SOCIAL 20-21.pdf'),
+(23, 301, 'DETECCION DE FORTALEZAS Y AREAS DE OPORTUNIDAD DE LOS ALUMNOS  QUE SUSTENTAN EL EXAMEN GENERAL DE EGRESO DE LA LICENCIATURA EN INFORMATICA, EN LA FACULTAD DE CONTADURÍA Y ADMINISTRACIÓN TIJUANA', 2, '2015', 2, '2016', '', 'Deteccion de fortalezas y areas de oportunidad.pdf'),
+(24, 0, 'PROPUESTA DE CREACIÓN DEL CLUSTER GASTRONÓMICO COMO ESTRATEGIA PARA FOMENTAR LA INNOVACIÓN EN LA INDUSTRIA', 2, '2016', 2, '2017', '', 'Propuesta de creacion del cluster gastronomico.pdf'),
+(25, 301, 'CAPACIDADES TECNOLÓGICAS DEL BIT CENTER', 2, '2015', 2, '2016', '', 'CAPACIDADES TECNOLÓGICAS DEL BIT CENTER.pdf'),
+(26, 0, 'FACTORES REGIONALES QUE DETERMINAN EL EMPRENDIMIENTO Y CRECIMIENTO DE LAS PYMES EN AMÉRICA LATINA. EL CASO DE MÉXICO Y COLOMBIA', 1, '2015', 2, '2017', '', 'FACTORES REGIONALES QUE DETERMINAN EL EMPRENDIMIENTO Y CRECIMIENTO DE LAS.pdf'),
+(27, 301, 'POSICIONAMIENTO DEL BIT CENTER EN LA REGIÓN', 2, '2015', 2, '2016', '', 'POSICIONAMIENTO DEL BIT CENTER EN LA REGIÓN.pdf');
 
 -- --------------------------------------------------------
 
@@ -333,12 +377,94 @@ CREATE TABLE `investigaciones_autores` (
 --
 
 INSERT INTO `investigaciones_autores` (`id_investigaciones_autores`, `id_investigacion`, `id_autor`, `asociado`) VALUES
-(8, 5, 1, 0),
-(9, 5, 3, 1),
-(10, 5, 7, 1),
-(11, 5, 10, 1),
-(12, 5, 2, 1),
-(15, 9, 1, 0);
+(24, 13, 1, 0),
+(25, 13, 43, 1),
+(26, 13, 44, 1),
+(27, 13, 45, 1),
+(28, 13, 3, 1),
+(29, 13, 46, 1),
+(30, 13, 2, 1),
+(31, 14, 26, 0),
+(32, 14, 36, 1),
+(33, 14, 2, 1),
+(34, 14, 47, 1),
+(35, 14, 48, 1),
+(36, 15, 7, 0),
+(37, 15, 28, 1),
+(38, 15, 29, 1),
+(39, 15, 1, 1),
+(40, 15, 2, 1),
+(41, 16, 10, 0),
+(42, 16, 48, 1),
+(43, 16, 2, 1),
+(44, 16, 27, 1),
+(45, 17, 36, 0),
+(46, 17, 1, 1),
+(47, 17, 2, 1),
+(48, 17, 10, 1),
+(49, 17, 37, 1),
+(50, 17, 26, 1),
+(51, 17, 48, 1),
+(52, 18, 2, 0),
+(53, 18, 1, 1),
+(54, 18, 36, 1),
+(55, 18, 10, 1),
+(56, 18, 37, 1),
+(57, 18, 27, 1),
+(58, 18, 26, 1),
+(59, 19, 1, 0),
+(60, 19, 3, 1),
+(61, 19, 7, 1),
+(62, 19, 10, 1),
+(63, 19, 2, 1),
+(64, 20, 10, 0),
+(65, 20, 27, 1),
+(66, 20, 37, 1),
+(67, 20, 36, 1),
+(68, 20, 1, 1),
+(69, 20, 48, 1),
+(70, 20, 2, 1),
+(71, 21, 1, 0),
+(72, 21, 3, 1),
+(73, 21, 2, 1),
+(74, 22, 48, 0),
+(75, 22, 37, 1),
+(76, 22, 26, 1),
+(77, 22, 10, 1),
+(78, 22, 36, 1),
+(79, 22, 1, 1),
+(80, 22, 49, 1),
+(81, 23, 37, 0),
+(82, 23, 26, 1),
+(83, 23, 36, 1),
+(84, 23, 48, 1),
+(85, 23, 1, 1),
+(86, 23, 50, 1),
+(87, 23, 2, 1),
+(88, 23, 27, 1),
+(89, 23, 10, 1),
+(90, 23, 3, 1),
+(91, 24, 3, 0),
+(92, 24, 52, 1),
+(93, 24, 3, 1),
+(94, 24, 51, 1),
+(95, 25, 36, 0),
+(96, 25, 3, 1),
+(97, 25, 2, 1),
+(98, 25, 50, 1),
+(99, 25, 10, 1),
+(100, 25, 1, 1),
+(101, 26, 53, 0),
+(102, 26, 46, 1),
+(103, 26, 44, 1),
+(104, 26, 54, 1),
+(105, 26, 55, 1),
+(106, 26, 56, 1),
+(107, 27, 59, 0),
+(108, 27, 50, 1),
+(109, 27, 1, 1),
+(110, 27, 2, 1),
+(111, 27, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -472,31 +598,31 @@ ALTER TABLE `articulos_autores`
 -- AUTO_INCREMENT de la tabla `autores`
 --
 ALTER TABLE `autores`
-  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `eventos_autores`
 --
 ALTER TABLE `eventos_autores`
-  MODIFY `id_eventos_autores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_eventos_autores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `investigaciones`
 --
 ALTER TABLE `investigaciones`
-  MODIFY `id_investigacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_investigacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `investigaciones_autores`
 --
 ALTER TABLE `investigaciones_autores`
-  MODIFY `id_investigaciones_autores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_investigaciones_autores` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT de la tabla `libros`

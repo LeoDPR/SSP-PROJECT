@@ -162,13 +162,26 @@ if (isset($_POST['investigacion'])) {
             $sql = "SELECT investigaciones.*, GROUP_CONCAT(CONCAT(autores.nombre, ' ', autores.apellido) SEPARATOR ', ') as nombre_autor FROM investigaciones 
             INNER JOIN investigaciones_autores ON investigaciones.id_investigacion = investigaciones_autores.id_investigacion 
             INNER JOIN autores ON investigaciones_autores.id_autor = autores.id_autor 
-            WHERE investigaciones.titulo =  ?";
+            WHERE investigaciones.titulo =  ? AND investigaciones_autores.asociado = 0";
 
             $stmt = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt, "s", $titulo);
             mysqli_stmt_execute($stmt);
 
             $investigacion = mysqli_stmt_get_result($stmt);
+
+            
+            $sql = "SELECT GROUP_CONCAT(CONCAT(autores.nombre, ' ', autores.apellido) SEPARATOR ', ') as nombre_asociados FROM investigaciones 
+            INNER JOIN investigaciones_autores ON investigaciones.id_investigacion = investigaciones_autores.id_investigacion 
+            INNER JOIN autores ON investigaciones_autores.id_autor = autores.id_autor 
+            WHERE investigaciones.titulo =  ? AND investigaciones_autores.asociado = 1";
+
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_bind_param($stmt, "s", $titulo);
+            mysqli_stmt_execute($stmt);
+
+            $asociados_result = mysqli_stmt_get_result($stmt);
+            $asociados_names = mysqli_fetch_assoc($asociados_result);
             if ($investigaciones = mysqli_fetch_assoc($investigacion)) {
                 ?>
                 <div class="inv__img">
@@ -188,6 +201,10 @@ if (isset($_POST['investigacion'])) {
                             <br />
                             <p><strong>Autores:</strong>
                                 <?php echo $investigaciones['nombre_autor'] ?>
+                            </p>
+                            </p>
+                            <p><strong>Asociados:</strong>
+                                <?php echo $asociados_names['nombre_asociados'] ?>
                             </p>
                             </p>
                             <br />
