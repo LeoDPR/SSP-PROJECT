@@ -16,6 +16,7 @@
 <body onload="sendRequest('<?php echo $_GET['titulo'] ?>', '<?php echo $_GET['tipo'] ?>')">
     <?php include './views/navbar.php'; ?>
 
+    <div id="particles-js"></div>
 
     <div id="Documentos" class="">
 
@@ -26,6 +27,7 @@
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
     <script src="./js/app.js"></script>
     <script src="./js/main2.js"></script>
+    <script src="./js/particles.min.js"></script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
         function googleTranslateElementInit() {

@@ -13,13 +13,14 @@
         <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/navbar_footer.css">
         <link rel="stylesheet" href="./css/styles2.css">
-
     </head>
     <body>
         <?php include './views/navbar.php'; ?>
 
 
         <!--  ///////////////////// Contacto /////////////////   -->
+
+        <div id="particles-js"></div>
 
         <div id="Contacto">
             <div class="contacto__img">
@@ -75,6 +76,7 @@
                 var respuesta = confirm("Esta apunto de enviar un mensaje al Cuerpo Academico. ¿Desea enviar el mensaje?");
 
                 if (respuesta == true) {
+                    alert('Se te enviaria un correo con respuesta dentro de 2 a 5 dias habiles');
                     return true;
                 } else {
                     return false;
@@ -82,6 +84,8 @@
             }
         </script>
         <script src="./js/main2.js"></script>
+        <script src="./js/particles.min.js"></script>
+        <script src="./js/app.js"></script>
         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script>
             function googleTranslateElementInit() {

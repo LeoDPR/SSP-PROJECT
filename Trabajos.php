@@ -19,10 +19,10 @@
     
    <!-- //////////Trabajos////////////// -->
 
-   <div id="Trabajos" class="">
-    <div class="trab__img">
+   <div id="particles-js"></div>
 
-    </div>
+   <div id="Trabajos" class="">
+        <div class="trab__img"></div>
         <aside class="sidebar">
             <ul class="aside__list">
                 <li class="sidebar__item">
@@ -117,6 +117,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="./js/app.js"></script>
     <script src="./js/main2.js"></script>
+    <script src="./js/particles.min.js"></script>
     <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'es', includedLanguage: 'en, es'}, 'google_translate_element');

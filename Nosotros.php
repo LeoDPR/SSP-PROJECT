@@ -20,16 +20,18 @@
 
     <!-- //////////Nosotros///////// -->
 
+    <div id="particles-js"></div>
+
     <div id="Nosotros" class="">
         <div class="nosotros__container">
             <aside class="nosotros__nav">
                 <h3>¿Quiénes Somos?</h3>
                 <hr class="hr__nav">
-                <a href="#nosotros__menu" class="nosotros__links" onclick="mostrar_ocultar_Subnosotros()">Nosotros</a>
+                <a href="#nosotros__menu" class="aside__links" onclick="mostrar_ocultar_Subnosotros()">Nosotros</a>
                 <hr class="hr__nav">
-                <a href="#historia__container" class="nosotros__links" onclick="mostrar_ocultarHistoria()">Historia</a>
+                <a href="#historia__container" class="aside__links" onclick="mostrar_ocultarHistoria()">Historia</a>
                 <hr class="hr__nav">
-                <a href="#universidad__container" class="nosotros__links"
+                <a href="#universidad__container" class="aside__links"
                     onclick="mostrar_ocultarUniversidad()">Universidad</a>
                 <hr class="hr__nav">
             </aside>
@@ -175,6 +177,7 @@
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="./js/app.js"></script>
     <script src="./js/main2.js"></script>
+    <script src="./js/particles.min.js"></script>
     <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'es', includedLanguage: 'en, es'}, 'google_translate_element');

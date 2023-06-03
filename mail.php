@@ -25,6 +25,8 @@
 
         mail($para, $asunto, utf8_decode($message), $header);
         
+        echo "<script>alert('Se te enviaria un correo con respuesta dentro de 2 a 5 dias habiles');</script>";
+
         header('location: Contacto.php');
 
     }
