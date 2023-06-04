@@ -14,11 +14,11 @@ include('./config.php');
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/navbar_footer.css">
     <link rel="stylesheet" href="./css/styles2.css">
-
 </head>
 
 <body id="body__noticias">
     <?php include './views/navbar.php'; ?>
+    <div id="particles-js"></div>
     <h1 class="titulo">Eventos</h1>
     <!--  /////////////////////   Mostrar eventos existentes /////////////////   -->
     <div id="eventos">
@@ -56,6 +56,8 @@ include('./config.php');
 
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="./js/main2.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/app.js"></script>
     <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'es', includedLanguage: 'en, es'}, 'google_translate_element');

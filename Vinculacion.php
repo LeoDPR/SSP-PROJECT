@@ -13,13 +13,14 @@
         <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/navbar_footer.css">
         <link rel="stylesheet" href="./css/styles2.css">
-
     </head>
     <body>
         <?php include './views/navbar.php'; ?>
 
 
         <!--  ///////////////////// Vinculación /////////////////   -->
+
+        <div id="particles-js"></div>
 
         <div id="Vinculacion">
             <div class="vinculacion__img">
@@ -228,6 +229,8 @@
     
         <?php include './views/footer.php'; ?> <!-- Sirve para mostrar el footer -->
         <script src="./js/main2.js"></script>
+        <script src="./js/particles.min.js"></script>
+        <script src="./js/app.js"></script>
         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script>
             function googleTranslateElementInit() {

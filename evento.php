@@ -15,6 +15,7 @@ include('./views/get_data.php');
   </head>
   <body>
     <?php include './views/navbar.php'; ?>
+    <div id="particles-js"></div>
     <main class="show_info">
 		<article>
 			<section class="box_info">
@@ -35,6 +36,8 @@ include('./views/get_data.php');
 
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
     <script src="./js/main2.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/app.js"></script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
         function googleTranslateElementInit() {

@@ -14,11 +14,12 @@ include('./config.php');
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/navbar_footer.css">
     <link rel="stylesheet" href="./css/styles2.css">
-
 </head>
 
 <body>
     <?php include './views/navbar.php'; ?>
+
+    <div id="particles-js"></div>
 
     <h1 class="titulo">Miembros</h1>
     <div id="miembros">
@@ -41,7 +42,7 @@ include('./config.php');
                                 Mas informacion
                             </button>
                         </div>
-            </div>
+                    </div>
 
             <div id="modal<?php echo $row['id_autor']; ?>" class="modal-container">
                 <div class="modal">
@@ -76,6 +77,8 @@ include('./config.php');
 
     <?php include './views/footer.php'; ?> <!-- Sirve para mostrar el footer -->
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/app.js"></script>
     <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'es', includedLanguage: 'en, es'}, 'google_translate_element');

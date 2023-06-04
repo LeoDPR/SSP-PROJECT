@@ -28,6 +28,8 @@ include('./config.php');
 
     <!-- /////////Inicio -->
 
+    <div id="particles-js"></div>
+
     <div id="Inicio">
         <section class="inicio__container">
             <h1 class="inicio__title">Complejidad y gestion de las organizaciones</h1>
@@ -168,6 +170,7 @@ include('./config.php');
 
     <script src="./js/app.js"></script>
     <script src="./js/main2.js"></script>
+    <script src="./js/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
