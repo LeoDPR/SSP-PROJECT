@@ -37,7 +37,7 @@ include('./config.php');
         <main>
             <section class="news  container">
                 <div class="news__container">
-                    <h2 class="subtitle2">Noticias/Eventos</h2>
+                    <h2 class="subtitle2">Eventos</h2>
                     <div class="articles__news" id="articles-news">
 
                         <?php

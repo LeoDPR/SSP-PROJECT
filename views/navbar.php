@@ -8,7 +8,7 @@
                     <a href="index.php" class="nav__links">Inicio</a>
                 </li>
                 <li class="nav__items">
-                    <a href="Noticias.php" class="nav__links">Noticias</a>
+                    <a href="Noticias.php" class="nav__links">Eventos</a>
                 </li>
                 <li class="nav__items">
                     <a href="Trabajos.php" class="nav__links">Trabajos</a>
