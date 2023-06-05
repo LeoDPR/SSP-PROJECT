@@ -1,0 +1,7 @@
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+<Files "config.php">
+    Deny from all
+</Files>
+Options -Indexes

@@ -24,7 +24,7 @@ include('./config.php');
 
     <header class="hero">
         <?php include './views/navbar.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
-    </header> 
+    </header>
 
     <!-- /////////Inicio -->
 
@@ -76,7 +76,7 @@ include('./config.php');
             <?php
 
             // Consulta SQL para recuperar las noticias
-            $sqlInv = "SELECT * FROM investigaciones ORDER BY id_investigacion DESC LIMIT 1;";
+            $sqlInv = "SELECT * FROM libros ORDER BY fecha_publicacion DESC LIMIT 1;";
             $resultInv = mysqli_query($conn, $sqlInv);
 
             // Convertir los resultados a formato JSON
@@ -84,11 +84,11 @@ include('./config.php');
 
             ?>
             <section class="investigaciones container">
-                <h2 class="subtitle2">Investigaciones</h2>
+                <h2 class="subtitle2">Libros</h2>
                 <div class="investigaciones__container">
                     <div class="investigaciones__texts">
-                        <a href="info_trabajo.php?titulo=<?php echo $rowInv['titulo']; ?>&tipo=Investigación">
-                            <h2 class="subtitle3">
+                        <a href="info_trabajo.php?titulo=<?php echo $rowInv['titulo']; ?>&tipo=Libro">
+                            <h2 class="subtitle2">
                                 <?php echo $rowInv['titulo'] ?>
                             </h2>
                             <p class="investigaciones__paragraph">
@@ -98,7 +98,7 @@ include('./config.php');
                     </div>
 
                     <figure class="investigaciones__picture">
-                        <img src="./images/varias/research.jpg" alt="imagen de investigacion"
+                        <img src="trabajos\libros\images\<?php echo $rowInv['imagen'] ?>" alt="imagen de investigacion"
                             class="investigacion__img">
                     </figure>
 
@@ -174,10 +174,11 @@ include('./config.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguage: 'en, es'}, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguage: 'en, es' }, 'google_translate_element');
         }
     </script>
 </body>
