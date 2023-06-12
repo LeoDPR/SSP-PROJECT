@@ -16,15 +16,13 @@ include('./config.php');
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="shortcut icon" href="./images/Iconos/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/navbar_footer.css">
     <link rel="stylesheet" href="./css/styles2.css">
+    <link rel="stylesheet" href="./css/navbar_footer.css">
 </head>
 
 <body>
-
-    <header class="hero">
         <?php include './views/navbar.php'; ?> <!-- Sirve para mostrar la barra de navegacion -->
-    </header>
+
 
     <!-- /////////Inicio -->
 

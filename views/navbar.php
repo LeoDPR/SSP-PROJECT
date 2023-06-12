@@ -1,6 +1,7 @@
 <nav class="nav">
             <div class="nav__logo">
-                <h2 class="nav__title"> <a href="index.php">Cuerpo academico</a></h2>
+                <!--<h4 class="nav__title"> Complejidad y Gestión de<br> las organizaciones.</h4>-->
+                <img src="images/iconos/logo.png" alt="" class="nav__img__logo">
             </div>
 
             <ul class="nav__link nav__link--menu">
