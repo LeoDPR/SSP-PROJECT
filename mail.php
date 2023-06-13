@@ -1,12 +1,14 @@
 <?php
 
+    include('./config.php');
+
     if ($_POST) {
 
-        $nombre = $_POST['nombre'];
-        $telefono = $_POST['telefono'];
-        $email = $_POST['email'];
-        $asunto = $_POST['asunto'];
-        $comentarios = $_POST['comentarios'];
+        $nombre = limpiar_cadena($_POST['nombre']);
+        $telefono = limpiar_cadena($_POST['telefono']);
+        $email = limpiar_cadena($_POST['email']);
+        $asunto = limpiar_cadena($_POST['asunto']);
+        $comentarios = limpiar_cadena($_POST['comentarios']);
 
         $header = 'From: ' . $email . " \r\n";
         $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";

@@ -202,10 +202,9 @@ if (isset($_POST['investigacion'])) {
                             <p><strong>Autores:</strong>
                                 <?php echo $investigaciones['nombre_autor'] ?>
                             </p>
-                            </p>
+                            <br />
                             <p><strong>Asociados:</strong>
                                 <?php echo $asociados_names['nombre_asociados'] ?>
-                            </p>
                             </p>
                             <br />
                             <p><strong>Peridio de Inicio:</strong>
